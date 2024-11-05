@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đậu xanh</title>
+    <link rel="stylesheet" href="/filenoidunghtml/csstrangcongthucmau.css">
+    <script src="/filenoidunghtml/jsmautrangcongthuc.js"></script>
+   
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    </style>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../res/fontawesome/css/all.css" />
+    <style type="text/css">
+        .bentrai{
+        display: none;
+    }
+    .benphai{
+        display: none;
+    }
+    #nut4 i{
+        font-size: 35px;
+    }
+    #nut4{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: pointer;
+    }
+    
+    #nut5 i{
+        font-size: 35px;
+    }
+    #nut5{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: pointer;
+    }
+        @media screen and (max-width: 768px) {
+            .player{
+                width: 80%;
+                
+            }
+            
+            img{
+                width: 100%;
+            }
+            #textbanquyen{
+                display: none;
+            }
+            #backtop1{
+            display: none;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        #backtop{
+            display: none;
+        }
+        .info{
+            font-size: 15px;
+        }
+        /* .thanhtrai{
+            display:none;
+        }
+        .thanhphai{
+            display:none;
+        } */
+        
+        .benphai{
+            position: absolute;
+            left: 85%;
+            bottom: 3%;
+        }
+        .bentrai{
+            position: absolute;
+            right: 85%;
+            bottom: 3%;
+        }
+        .thanhtrai{
+            display:none;
+        }
+        .thanhphai{
+            display:none;
+        }
+        .bentrai{
+        display: block;
+    }
+    .benphai{
+        display: block;
+    }
+    
+    footer{
+        height: 10%;
+    }
+    #textbanquyen{
+        display: none;
+    }
+        }
+    </style>
+</head>
+<body id="text">
+<!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+<div class="thanhphai">
+    <a target="_self" href="/Nhi html/daungu.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+</div>
+<div class="thanhtrai">
+    <a target="_self" href="/Nhi html/nhomdau.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+   
+
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+<div id="backtop1" class="vecuoitrang" >
+    <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+</div>
+<div id="backtop" class="vedautrang">
+    <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+
+  
+<div class="content">
+    <h3 class="tieudenhomnguyenlieu">Đậu xanh</h3>
+    <!-- <div align="center" style="padding-top: 10px;"><img src="/1.png"></div> -->
+    <div id="boxloiich">
+        <p><b>Lợi ích:</b></p>
+        <p>Cải thiện chức năng tiêu hóa và tạo cảm giác no lâu hơn.</p>
+        <p>Trong đậu xanh chứa nhiều vitamin và khoáng chất, giúp tăng cường sức khỏe
+            tim mạch và hỗ trợ hệ miễn dịch.</p>
+        <p><b>Màu sữa thành phẩm:</b> Nếu bỏ vỏ thì sữa có màu vàng nhạt. Nếu nấu sữa cả vỏ thì
+            sữa có màu xanh nhạt.</p>
+        <p><b>Sơ chế:</b> Rừa sạch và ngâm 8 - 12 giờ trước khi nấu.</p>
+    </div>
+    <hr>
+    <h4 class="tieudenhomnguyenlieu">
+        Các công thức
+    </h4>
+    <div id="stylecongthuc">
+        <a href="#ct1"><p class="tieudenhomnguyenlieu1">Sữa đậu xanh - bí đỏ</p></a>
+        <a href="#ct2"><p class="tieudenhomnguyenlieu1">Sữa đậu xanh - hạt điều</p></a>
+        <a href="#ct3"><p class="tieudenhomnguyenlieu1">Sữa đậu xanh - hạt sen - dừa non</p></a>
+        
+    </div>
+
+    
+
+
+<!--Công thức là text-->
+<hr>
+    <p id="ct1" align="center">
+        <b><span style='font-size:30px;'>&#129371;</span>Công thức sữa đậu xanh - bí đỏ <span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+    <div id="khungnguyenlieu"><p><b>Nguyên liệu</b></p></div>
+    <p>&#129382; Đậu xanh: 60g</p>
+    <p>&#129382; Bí đỏ: 50g</p>
+    <p>&#129382; Nước đường: 40ml</p>
+    <p>&#129382; Nước: 1000ml</p>
+    <p>&#129382; Muối hồng: 1g</p>
+
+    <div id="khungnguyenlieu"><p><b>Cách nấu bằng máy</b></p></div>
+    <p> &#9997; Cho tất cả các nguyên liệu (trừ đường) vào máy, chọn chế độ sữa nấu chín.</p>
+    <p>&#9997; Sau đó lọc mịn và cho đường vào khuấy đều.</p>
+
+    <div id="khungnguyenlieu"><p><b>Cách nấu thủ công</b></p></div>
+    <p> &#9997;Cho tất cả nguyên liệu (trừ đường) vào nồi nấu chín.</p>
+    <p>&#9997; Nấu xong xay mịn và lọc kỹ, cuối cùng cho đường vào khuấy đều.</p>
+
+
+
+    <hr>
+    <!--Công thức có ảnh-->
+       <p id="ct2" align="center">
+           <b><span style='font-size:30px;'>&#129371;</span>Công thức sữa đậu xanh - hạt điều <span style='font-size:30px;'>&#129371;</span></b>
+       </p>
+       
+       <div align="center" ><img id="contentImage1" src="/Nhi multimedia/suadauxanh-hatdieu.png" width="100%"></div>
+   
+
+    <!--Công thức là audio-->
+    <hr>
+    <p id="ct3" align="center">
+        <b><span style='font-size:30px;'>&#129371;</span>Công thức sữa đậu xanh - hạt sen - dừa non  <span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+    <audio  id="player" src="/Nhi multimedia/suadauxanh-hatsen-duanon .mp3"></audio>
+    <div class="player">
+        <div class="control">
+          <i class="fas fa-play" id="playbtn"></i>
+        </div>
+        <div class="info">
+            <b>Công thức sữa đậu xanh - hạt sen - dừa non</b>
+          <div class="bar">
+            <div id="progress"></div>
+          </div>
+        </div>
+  
+        <div id="current">0:00</div>
+      </div>
+    
+    
+    
+    
+
+
+
+        
+
+
+
+
+
+    
+</div>
+
+
+<!--Phần hihglight popup-->
+<div class="popup" id="highlightPopup">
+    <span>Chọn màu để highlight</span>
+    <button class="yellow" data-color="highlight-yellow">Vàng</button>
+    <button class="green" data-color="highlight-green">Xanh</button>
+    <button class="pink" data-color="highlight-pink">Hồng</button>
+    <button id="removeHighlight">Xoá Highlight</button>
+</div>
+
+
+
+
+    
+<!--Phần footer-->
+<footer>
+    <div class="bentrai">
+        <a target="_self" href="nhomdau.html"><button id="nut4"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+
+    <p id="textbanquyen"  style="color: rgb(255, 255, 255); text-align: center; font-size: 15px;">Sách thuộc bản quyền của NXB</p>
+
+    <div class="benphai">
+        <a target="_self" href="daungu.html"><button id="nut5"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+
+</footer>
+<script>
+    $(function(){
+        $('#contentImage1').bind('contextmenu',function(){ return false;});
+    });
+</script>
+</body>
+<script src="/filenoidunghtml/jschoaudio.js"></script>
+<script src="/filenoidunghtml/jschoslide.js"></script>
+</html>

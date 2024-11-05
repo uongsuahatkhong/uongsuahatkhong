@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm nguyên liệu tươi</title>
+    <link rel="stylesheet" href="/filenoidunghtml/cssndungmau.css">
+    <link rel="stylesheet" href="/filenoidunghtml/csschotrangnhomnguyenlieu.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    </style>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../res/fontawesome/css/all.css" />
+
+
+    <style type="text/css">
+        .bentrai{
+        display: none;
+    }
+    .benphai{
+        display: none;
+    }
+    #nut4 i{
+        font-size: 35px;
+    }
+    #nut4{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: pointer;
+    }
+    
+    #nut5 i{
+        font-size: 35px;
+    }
+    #nut5{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: pointer;
+    }
+        @media screen and (max-width: 768px) {
+            .player{
+                width: 80%;
+                
+            }
+            
+            img{
+                width: 100%;
+            }
+            #textbanquyen{
+                display: none;
+            }
+            #backtop1{
+            display: none;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        #backtop{
+            display: none;
+        }
+        .info{
+            font-size: 15px;
+        }
+        /* .thanhtrai{
+            display:none;
+        }
+        .thanhphai{
+            display:none;
+        } */
+        
+        .benphai{
+            position: absolute;
+            left: 85%;
+            bottom: 3%;
+        }
+        .bentrai{
+            position: absolute;
+            right: 85%;
+            bottom: 3%;
+        }
+        .thanhtrai{
+            display:none;
+        }
+        .thanhphai{
+            display:none;
+        }
+        .bentrai{
+        display: block;
+    }
+    .benphai{
+        display: block;
+    }
+    
+    footer{
+        height: 10%;
+    }
+    #textbanquyen{
+        display: none;
+    }
+    .effect3{
+        overflow: scroll;
+    }
+    .effect3 img{
+        width: 80%;
+    }
+    .effect4{
+        overflow: scroll;
+    }
+    #img1{
+        width: 30%;
+    }
+        }
+    </style>
+</head>
+<body  id="text" >
+
+<!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+<div class="thanhphai">
+    <a target="_self" href="/Nhi html/duanon.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+</div>
+<div class="thanhtrai">
+    <a target="_self" href="/duonghtml/nhungluuykhinausua.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+   
+
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+<div id="backtop1" class="vecuoitrang" >
+    <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+</div>
+<div id="backtop" class="vedautrang">
+    <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+
+<!--Phần nội dung chính-->
+    
+
+
+<!--Phần background video--> 
+       <video autoplay loop muted play-inline class="back-video" >
+        <source src="/Filemusic/back video 1.mp4" type="video/mp4" >
+       </video>
+
+
+       <h3 class="tieudenhomnguyenlieu">Nhóm nguyên liệu tươi</h3>
+       <div class="effect2">
+        <div><img id="img1" src="/anhban1.PNG" width="25%"></div>
+        <p> 
+            <span style="color: rgb(0, 0, 0)">
+                Bao gồm: Khoai lang, hạt sen, dừa, ngô, bí đỏ...
+            </span>
+        </p>
+        <p> 
+            <span style="color: rgb(0, 0, a0)">
+                Đặc tính: Thành phẩm có độ sệt, sánh, hương thơm tự nhiên.
+            </span>
+        </p>
+        <p> 
+            <span style="color: rgb(0, 0, 0)">
+                Tỷ lệ với chất lỏng: 150g nguyên liệu tươi sẽ sử dụng 1000 - 1300ml nước (hoặc các loại chất lỏng khác).
+            </span>
+        </p>
+       </div>
+
+
+
+
+       
+       <div class="effect3" >
+        <a href="/Nhi html/duanon.html" target="_self"><img src="/Nhi multimedia/duanon.png"></a>
+        <a href="/Nhi html/cudau.html" target="_self"><img src="/Nhi multimedia/cudau.png"></a>
+        <a href="/Nhi html/ngongot.html" target="_self"><img src="/Nhi multimedia/ngongot.png"></a>
+        <a href="/Nhi html/ngonep.html" target="_self"><img src="/Nhi multimedia/ngonep.png"></a>
+        <a href="/Nhi html/cuau.html" target="_self"><img src="/Nhi multimedia/cuau.png"></a>
+        <a href="/Nhi html/sake.html" target="_self"><img src="/Nhi multimedia/sake.png"></a>
+        <a href="/Nhi html/bido.html" target="_self"><img src="/Nhi multimedia/bido.png"></a>
+
+
+        
+       </div>
+
+       <div class="effect4" >
+        <a href="/Nhi html/hatsen.html" target="_self"><img src="/Nhi multimedia/hatsen.png"></a>
+        <a href="/Nhi html/khoaimon.html" target="_self"><img src="/Nhi multimedia/khoaimon.png"></a>
+        <a href="/Nhi html/khoailangvang.html" target="_self"><img src="/Nhi multimedia/khoailangvang.png"></a>
+        <a href="/Nhi html/khoailangtim.html" target="_self"><img src="/Nhi multimedia/khoailangtim.png"></a>
+        <a href="/Nhi html/khoaitay.html" target="_self"><img src="/Nhi multimedia/khoaitay.png"></a>
+        <a href="/Nhi html/cunang.html" target="_self"><img src="/Nhi multimedia/cunang.png"></a>
+        <a href="/Nhi html/cauhoinhomnguyelieutuoi.html" target="_self"><img src="/Nhi multimedia/cauhoi.png"></a>
+
+       </div>
+
+        
+        
+        
+        
+        
+       
+        
+  
+
+
+<!--Phần footer-->
+<footer>
+    <div class="bentrai">
+        <a target="_self" href="/filenoidunghtml/cauhoiphandau.html"><button id="nut4"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+
+    <p id="textbanquyen"  style="color: rgb(255, 255, 255); text-align: center; font-size: 15px;">Sách thuộc bản quyền của NXB</p>
+
+    <div class="benphai">
+        <a target="_self" href="duanon.html"><button id="nut5"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+
+</footer>
+
+<script>
+    ScrollReveal({ 
+        reset: true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400,
+    });
+
+    ScrollReveal().reveal('.tieudenhomnguyenlieu', { delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.effect2', { delay: 600, origin: 'bottom' });
+    ScrollReveal().reveal('.effect3', { delay: 800, origin: 'left' });
+    ScrollReveal().reveal('.effect4', { delay: 800, origin: 'left' });
+</script>
+
+
+</body>
+</html>

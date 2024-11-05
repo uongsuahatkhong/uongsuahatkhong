@@ -1,0 +1,205 @@
+footer{
+    position: fixed;
+    width: 100%;
+    background-color: #000000;
+    bottom: 0;
+    height: 8%;
+    left:0;
+    
+}
+body{
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.5;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+p{
+    text-indent: 40px;
+}
+
+
+#nut1 i{
+    font-size: 45px;
+    }
+    #nut1{
+        border: none;
+        background: none;
+        color: #000000;
+        cursor: pointer;
+    }
+    .thanhphai{
+    position: fixed;
+    left: 90%;
+    bottom: 50%;
+    }
+
+
+
+    #nut2 i{
+        font-size:45px;
+    }
+    #nut2{
+        border: none;
+        background: none;
+        color: #000000;
+        cursor: pointer;
+    }
+    .thanhtrai{
+
+        position:fixed;
+        right:90%;
+        bottom:50%;
+    }
+
+
+
+
+    
+
+
+
+
+    #backtop i{
+        font-size:32px;
+        color:#000000;
+        cursor:pointer;
+    }
+    #backtop{
+        position: fixed;
+        left:91%;
+        bottom: 50px;
+    }
+    
+    #backtop1 i{
+        font-size:32px;
+        color:#000000;
+        cursor:pointer;
+    }
+    #backtop1{
+        position: fixed;
+        left:91%;
+        bottom: 95px;
+    }
+    
+    #chuthich{
+        text-align:center;
+        font-size:17px;
+        margin-top: 3px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-indent: 0px;
+    }
+    body::-webkit-scrollbar {
+        width: 12px;               /* width of the entire scrollbar */
+      }
+      
+      body::-webkit-scrollbar-track {
+        background: rgb(255, 255, 255);        /* color of the tracking area */
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        background-color: #000000;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+          /* creates padding around scroll thumb */
+      }
+
+
+
+      .quiz-container {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 1000px;
+        margin: auto;
+
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #000000;
+    }
+    .question {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background: #f4ffd5;
+    }
+    .question p {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    .result {
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        background: #f9f9f9;
+    }
+    .btn {
+        display: block;
+        width: 100%;
+        background-color: #a9f2ff;
+        color: rgb(0, 0, 0);
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    .btn:hover {
+        background-color: #ffe8aa;
+    }
+    .correct {
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+        color: #155724;
+        padding: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    .incorrect {
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+        color: #721c24;
+        padding: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+    }
+    .drag-container {
+        margin-bottom: 10px;
+    }
+    .draggable {
+        display: inline-block;
+        background: #ddd;
+        padding: 5px 10px;
+        margin: 5px;
+        cursor: grab;
+        border-radius: 5px;
+        user-select: none;
+    }
+    .dropzone {
+        display: inline-block;
+        width: 300px;
+        height: 30px;
+        background: #f0f0f0;
+        border: 2px dashed #ccc;
+        margin: 5px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 30px;
+    }
+    #timer {
+        font-size: 18px;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
