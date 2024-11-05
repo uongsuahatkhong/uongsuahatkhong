@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhóm hạt có dầu</title>
+    <link rel="stylesheet" href="/filenoidunghtml/cssndungmau.css">
+    <link rel="stylesheet" href="/filenoidunghtml/csschotrangnhomnguyenlieu.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    </style>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../res/fontawesome/css/all.css" />
+
+    <style type="text/css">
+        .bentrai{
+        display: none;
+    }
+    .benphai{
+        display: none;
+    }
+    #nut4 i{
+        font-size: 35px;
+    }
+    #nut4{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: pointer;
+    }
+    
+    #nut5 i{
+        font-size: 35px;
+    }
+    #nut5{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: pointer;
+    }
+        @media screen and (max-width: 768px) {
+            .player{
+                width: 80%;
+                
+            }
+            
+            img{
+                width: 100%;
+            }
+            #textbanquyen{
+                display: none;
+            }
+            #backtop1{
+            display: none;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        #backtop{
+            display: none;
+        }
+        .info{
+            font-size: 15px;
+        }
+        /* .thanhtrai{
+            display:none;
+        }
+        .thanhphai{
+            display:none;
+        } */
+        
+        .benphai{
+            position: absolute;
+            left: 85%;
+            bottom: 3%;
+        }
+        body{
+                font-size: 18px;
+            }
+        .bentrai{
+            position: absolute;
+            right: 85%;
+            bottom: 3%;
+        }
+        .thanhtrai{
+            display:none;
+        }
+        #img1{
+        width: 20%;
+    }
+        .thanhphai{
+            display:none;
+        }
+        .bentrai{
+        display: block;
+    }
+    .benphai{
+        display: block;
+    }
+    
+    footer{
+        height: 10%;
+    }
+    #textbanquyen{
+        display: none;
+    }
+    .effect3 img{
+        width: 70%;
+    }
+    .effect4 img{
+        width: 70%;
+    }
+    .effect3{
+        margin-left: 30px;
+    }
+    .effect4{
+        margin-left: 30px;
+    }
+        }
+    </style>
+</head>
+<body  id="text" >
+
+<!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+<div class="thanhphai">
+    <a target="_self" href="dauphong.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+</div>
+<div class="thanhtrai">
+    <a target="_self" href="cauhoinhomquahach.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+   
+
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+<div id="backtop1" class="vecuoitrang" >
+    <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+</div>
+<div id="backtop" class="vedautrang">
+    <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+
+<!--Phần nội dung chính-->
+    
+
+
+<!--Phần background video--> 
+       <video autoplay loop muted play-inline class="back-video" >
+        <source src="/bduyenmulti/nhomhatcodau.mp4" type="video/mp4" >
+       </video>
+
+
+       <h3 class="tieudenhomnguyenlieu">Nhóm hạt có dầu</h3>
+       <div class="effect2">
+        <div><img id="img1" src="/bduyenmulti/nhomhatcodau.png" width="25%"></div>
+        <p> 
+            <span style="color: rgb(0, 0, 0)">
+                Bao gồm: Mè, hạt bí, hạt lanh, hạt hướng dương, hạt gai dầu,..
+
+            </span>
+        </p>
+        <p> 
+            <span style="color: rgb(0, 0, a0)">
+                Đặc tính: Có độ béo ngậy, sữa lỏng, dễ phân tầng.
+
+            </span>
+        </p>
+        <p> 
+            <span style="color: rgb(0, 0, 0)">
+                Tỷ lệ với chất lỏng: 100g hạt có thể nấu cùng 900-1000ml nước.
+            </span>
+        </p>
+        <p><b>Lưu ý:</b> Nhóm hạt có dầu có nhiều chất béo, bạn không nên nấu với nhiệt độ cao hoặc nấu quá lâu vì sẽ làm cho các chất béo đó tách béo ra khỏi nước nhé!
+        </p>
+       </div>
+
+
+
+
+       
+       <div class="effect3" >
+        <a href="/bduyenhtml/dauphong.html" target="_self"><img src="/bduyenmulti/anhbutton nguyen lieu (1)/dauphong.png"></a>
+        <a href="/bduyenhtml/hatgaidau.html" target="_self"><img src="/bduyenmulti/anhbutton nguyen lieu (1)/hatgaidau.png"></a>
+        <a href="/bduyenhtml/hathuongduong.html" target="_self"><img src="/bduyenmulti/anhbutton nguyen lieu (1)/hathuongduong.png"></a>
+        <a href="/bduyenhtml/hatbi.html" target="_self"><img src="/bduyenmulti/anhbutton nguyen lieu (1)/hatbi.png"></a>
+       </div>
+
+       <div class="effect4" >
+        <a href="/bduyenhtml/hatlanh.html" target="_self"><img src="/bduyenmulti/anhbutton nguyen lieu (1)/hatlanh.png"></a>
+        <a href="/bduyenhtml/metrang.html" target="_self"><img src="/bduyenmulti/anhbutton nguyen lieu (1)/metrang.png"></a>
+        <a href="/bduyenhtml/meden.html" target="_self"><img src="/bduyenmulti/anhbutton nguyen lieu (1)/meden.png"></a>
+        <a href="/bduyenhtml/cauhoi.html" target="_self"><img src="/bduyenmulti/cauhoi.png"></a>
+       </div>
+
+        
+        
+        
+        
+        
+       
+        
+  
+
+
+<!--Phần footer-->
+<footer>
+    <div class="bentrai">
+        <a target="_self" href="cauhoinhomquahach.html"><button id="nut4"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+
+    <p id="textbanquyen"  style="color: rgb(255, 255, 255); text-align: center; font-size: 15px;">Sách thuộc bản quyền của NXB</p>
+
+    <div class="benphai">
+        <a target="_self" href="dauphong.html"><button id="nut5"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+
+</footer>
+
+<script>
+    ScrollReveal({ 
+        reset: true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400,
+    });
+
+    ScrollReveal().reveal('.tieudenhomnguyenlieu', { delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.effect2', { delay: 600, origin: 'bottom' });
+    ScrollReveal().reveal('.effect3', { delay: 800, origin: 'left' });
+    ScrollReveal().reveal('.effect4', { delay: 800, origin: 'left' });
+</script>
+
+
+</body>
+</html>
