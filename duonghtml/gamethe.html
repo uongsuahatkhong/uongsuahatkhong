@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Game</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="stylegame.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    </style>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../res/fontawesome/css/all.css" />
+
+
+    <style type="text/css">
+      .bentrai{
+      display: none;
+  }
+  .benphai{
+      display: none;
+  }
+  #nut4 i{
+      font-size: 35px;
+  }
+  #nut4{
+      padding: 10px;
+      border:none;
+  background:none;
+  color:#fff8cf;
+  cursor: pointer;
+  }
+
+  #nut5 i{
+      font-size: 35px;
+  }
+  #nut5{
+      padding: 10px;
+      border:none;
+  background:none;
+  color:#fff8cf;
+  cursor: pointer;
+  }
+      @media screen and (max-width: 768px) {
+          .player{
+              width: 80%;
+              
+          }
+          
+          img{
+              width: 100%;
+          }
+          #textbanquyen{
+              display: none;
+          }
+          #backtop1{
+          display: none;
+      }
+      ::-webkit-scrollbar {
+          display: none;
+      }
+      #backtop{
+          display: none;
+      }
+      /* .thanhtrai{
+          display:none;
+      }
+      .thanhphai{
+          display:none;
+      } */
+      
+      .benphai{
+          position: absolute;
+          left: 85%;
+          bottom: 3%;
+      }
+      .bentrai{
+          position: absolute;
+          right: 85%;
+          bottom: 3%;
+      }
+      .thanhtrai{
+          display:none;
+      }
+      .thanhphai{
+          display:none;
+      }
+      .bentrai{
+      display: block;
+  }
+  .benphai{
+      display: block;
+  }
+  .info{
+      font-size: 15px;
+  }
+ 
+  footer{
+      height: 10%;
+  }
+  #textbanquyen{
+      display: none;
+  }
+      }
+  </style>
+  </head>
+  <body>
+
+    <!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+<div class="thanhphai">
+  <a target="_self" href="baoquan.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+</div>
+<div class="thanhtrai">
+  <a target="_self" href="ngamhat.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+<div id="backtop1" class="vecuoitrang" >
+  <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+</div>
+<div id="backtop" class="vedautrang">
+  <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+<!--Phần footer-->
+<footer>
+  <div class="bentrai">
+      <a target="_self" href="ngamhat.html"><button id="nut4"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+  </div>
+
+  <p id="textbanquyen"  style="color: rgb(255, 255, 255); text-align: center; font-size: 15px;">Sách thuộc bản quyền của NXB</p>
+
+  <div class="benphai">
+      <a target="_self" href="baoquan.html"><button id="nut5"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+  </div>
+
+</footer>
+
+    <div class="wrapper">
+      <div class="stats-container">
+        <div id="moves-count"></div>
+        <div id="time"></div>
+      </div>
+      <div class="game-container"></div>
+      <button id="stop" class="hide">Dừng chơi</button>
+    </div>
+    <div class="controls-container">
+      <p id="result"></p>
+      <button id="start">Bắt đầu</button>
+    </div>
+    <br>
+    <br>
+    <!-- Script -->
+    <script src="scriptgame.js"></script>
+  </body>
+</html>

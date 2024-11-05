@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/filenoidunghtml/csstrangcongthucmau.css">
+    <script src="/filenoidunghtml/jsmautrangcongthuc.js"></script>
+   
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    </style>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../res/fontawesome/css/all.css" />
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #f7ffaf;
+        }
+        </style>
+
+
+<style type="text/css">
+    .bentrai{
+    display: none;
+}
+.benphai{
+    display: none;
+}
+#nut4 i{
+    font-size: 35px;
+}
+#nut4{
+    padding: 10px;
+    border:none;
+background:none;
+color:#fff8cf;
+cursor: pointer;
+}
+
+#nut5 i{
+    font-size: 35px;
+}
+#nut5{
+    padding: 10px;
+    border:none;
+background:none;
+color:#fff8cf;
+cursor: pointer;
+}
+    @media screen and (max-width: 768px) {
+        .player{
+            width: 80%;
+            
+        }
+        
+        img{
+            width: 100%;
+        }
+        #textbanquyen{
+            display: none;
+        }
+        #backtop1{
+        display: none;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    #backtop{
+        display: none;
+    }
+    /* .thanhtrai{
+        display:none;
+    }
+    .thanhphai{
+        display:none;
+    } */
+    
+    .benphai{
+        position: absolute;
+        left: 85%;
+        bottom: 3%;
+    }
+    .bentrai{
+        position: absolute;
+        right: 85%;
+        bottom: 3%;
+    }
+    .thanhtrai{
+        display:none;
+    }
+    .thanhphai{
+        display:none;
+    }
+    .bentrai{
+    display: block;
+}
+.benphai{
+    display: block;
+}
+
+footer{
+    height: 10%;
+}
+#textbanquyen{
+    display: none;
+}
+    }
+</style>
+</head>
+<body id="text">
+<!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+<div class="thanhphai">
+    <a target="_self" href="thanhphancoban.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+</div>
+<div class="thanhtrai">
+    <a target="_self" href="dungcusudung.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+   
+
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+<div id="backtop1" class="vecuoitrang" >
+    <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+</div>
+<div id="backtop" class="vedautrang">
+    <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+
+  
+<div class="content">
+    <h3 class="tieudenhomnguyenlieu">LỰA CHỌN MÁY LÀM SỮA</h3>
+    
+    <hr>
+    <p id="ct4" align="center">
+        <b><span style='font-size:30px;'>&#129371;</span>Tiêu chí về ngoại hình <span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+    <table border="1">
+        <tr>
+            <td>Chất liệu sử dụng</td>
+            <td>Chất liệu sản phẩm không chỉ ảnh
+                hưởng đến độ bền của máy mà còn
+                ảnh hưởng tới chất lượng của sữa và
+                sức khỏe của người sử dụng.</td>
+        </tr>
+        <tr>
+            <td>Cối xay</td>
+            <td>Chọn chất liệu thủy tinh dày khoảng 5
+                lớp có gân tăng độ cứng, tính năng chịu
+                lực, chịu nhiệt tốt.</td>
+        </tr>
+        <tr>
+            <td>Ludi dao</td>
+            <td>Chọn máy có lưỡi dao bằng thép không
+                gỉ hoặc loại titan, sắc bén, bền bị trong
+                quá trình sử dụng.</td>
+        </tr>
+        <tr>
+            <td>Mâm nhiệt</td>
+            <td>Chọn máy có mâm nhiệt chống dính để
+                tránh bị khê trong khi nấu.</td>
+        </tr>
+        <tr>
+            <td>Thân máy</td>
+            <td>Chọn những máy có vỏ bằng chất liệu
+                nhựa ABS, PP có phủ bên ngoài một lớp
+                chống bụi bẩn.</td>
+        </tr>
+        <tr>
+            <td>Nắp máy</td>
+            <td>Chọn máy có nắp đậy kín kẽ, có thể
+                được tích hợp thêm công tắc chống trào
+                thông minh.</td>
+        </tr>
+        <tr>
+            <td>Các bộ phận khác</td>
+            <td>Chọn máy có tay cầm bằng nhựa nhám
+                và chân đế bên dưới phải có khả năng
+                chống trơn trượt.</td>
+        </tr>
+    </table>
+
+
+    <hr>
+    <p id="ct4" align="center">
+        <b><span style='font-size:30px;'>&#129371;</span>Tiêu chí về chất lượng <span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+    <table border="1">
+        <tr>
+            <td>Công suất xay</td>
+            <td>Máy có công suất từ 800W trở lên là
+                công suất xay thích hợp nhất. Với
+                công suất lớn, máy sẽ chế biến nhanh
+                chóng, đảm bảo chất lượng sữa mịn
+                sau khi xay.</td>
+        </tr>
+        <tr>
+            <td>Công suất nấu</td>
+            <td>Sản phẩm có công suất nấu từ 600 -
+                800W đang được đánh giá cao. Công
+                suất nấu càng cao thì thời gian nấu sẽ
+                càng nhanh chóng.</td>
+        </tr>
+        <tr>
+            <td>Dung tích</td>
+            <td>Loại máy làm sữa phù hợp nhất với nhu
+                cầu của mọi gia đình phải đáp ứng theo
+                số lượng của thành viên. Trung bình mỗi
+                gia đình có khoảng 4 người thì chọn
+                máy dung tích khoảng 1,5 - 21 là thích
+                hợp nhất.</td>
+        </tr>
+        <tr>
+            <td>Độ ổn khi máy vận hành</td>
+            <td>Tiếng ổn khi vận hành là một nhược
+                điểm của hầu hết các thiết bị xay nấu và
+                không dễ để khắc phục nhược điểm này.
+                Tuy nhiên, ở các dòng máy đắt tiến thì
+                độ ổn sẽ giảm đi một chút so với máy rẻ
+                tiến hơn.</td>
+        </tr>
+        <tr>
+            <td>Độ ổn khi máy vận hành</td>
+            <td>Tiếng ổn khi vận hành là một nhược
+                điểm của hầu hết các thiết bị xay nấu và
+                không dễ để khắc phục nhược điểm này. <br>Tuy nhiên, ở các dòng máy đắt tiến thì
+                độ ổn sẽ giảm đi một chút so với máy rẻ
+                tiến hơn.</td>
+        </tr>
+        <tr>
+            <td>Chức năng, tiện ích sử dụng</td>
+            <td>Người tiêu dùng nào cũng muốn sử
+                dụng một chiếc máy làm sữa hạt đa
+                năng, có thể sử dụng với nhiều mục đích
+                khác nhau. Hầu hết các dòng máy làm
+                sữa hạt trên thị trường đều có thể đáp
+                ứng yêu cầu này.<br>
+                Một chiếc máy nấu sữa hạt cùng lúc có
+                thể đảm nhận nhiều vai trò khác nhau
+                như: nấu sữa, hãm, nấu súp, hấp, làm
+                sinh tố....<br>
+                Đặc biệt, với những gia đình có trẻ đang
+                trong giai đoạn ăn dặm hay gia đình có
+                người cao tuổi thì sẽ tận dụng được các
+                tính năng như: hầm cháo, nấu súp trong
+                thời gian ngắn.</td>
+        </tr>
+       
+    </table>
+    
+    
+    
+   
+
+
+
+
+    
+
+    
+    
+</div>   
+<br>
+<br>
+
+
+
+
+
+  
+
+
+<!--Phần hihglight popup-->
+<div class="popup" id="highlightPopup">
+    <span>Chọn màu để highlight</span>
+    <button class="yellow" data-color="highlight-yellow">Vàng</button>
+    <button class="green" data-color="highlight-green">Xanh</button>
+    <button class="pink" data-color="highlight-pink">Hồng</button>
+    <button id="removeHighlight">Xoá Highlight</button>
+</div>
+
+
+
+
+    
+<!--Phần footer-->
+<footer>
+    <div class="bentrai">
+        <a target="_self" href="dungcusudung.html"><button id="nut4"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+
+    <p id="textbanquyen"  style="color: rgb(255, 255, 255); text-align: center; font-size: 15px;">Sách thuộc bản quyền của NXB</p>
+
+    <div class="benphai">
+        <a target="_self" href="thanhphancoban.html"><button id="nut5"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+
+</footer>
+<script>
+    $(function(){
+        $('#contentImage1').bind('contextmenu',function(){ return false;});
+    });
+</script>
+</body>
+<script src="/filenoidunghtml/jschoaudio.js"></script>
+<script src="/filenoidunghtml/jschoslide.js"></script>
+</html>

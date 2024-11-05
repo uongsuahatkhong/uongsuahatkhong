@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/filenoidunghtml/csstrangcongthucmau.css">
+    <script src="/filenoidunghtml/jsmautrangcongthuc.js"></script>
+   
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    </style>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../res/fontawesome/css/all.css" />
+    <style type="text/css">
+        #stylecongthuc a{
+            width: 30%;
+        }
+    </style>
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #f7ffaf;
+        }
+        </style>
+
+<style type="text/css">
+    .bentrai{
+    display: none;
+}
+.benphai{
+    display: none;
+}
+#nut4 i{
+    font-size: 35px;
+}
+#nut4{
+    padding: 10px;
+    border:none;
+background:none;
+color:#fff8cf;
+cursor: pointer;
+}
+
+#nut5 i{
+    font-size: 35px;
+}
+#nut5{
+    padding: 10px;
+    border:none;
+background:none;
+color:#fff8cf;
+cursor: pointer;
+}
+    @media screen and (max-width: 768px) {
+        .player{
+            width: 80%;
+            
+        }
+        
+        img{
+            width: 100%;
+        }
+        #textbanquyen{
+            display: none;
+        }
+        #backtop1{
+        display: none;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    #backtop{
+        display: none;
+    }
+    /* .thanhtrai{
+        display:none;
+    }
+    .thanhphai{
+        display:none;
+    } */
+    
+    .benphai{
+        position: absolute;
+        left: 85%;
+        bottom: 3%;
+    }
+    .bentrai{
+        position: absolute;
+        right: 85%;
+        bottom: 3%;
+    }
+    .thanhtrai{
+        display:none;
+    }
+    .thanhphai{
+        display:none;
+    }
+    .bentrai{
+    display: block;
+}
+.benphai{
+    display: block;
+}
+
+footer{
+    height: 10%;
+}
+#textbanquyen{
+    display: none;
+}
+    }
+</style>
+</head>
+<body id="text">
+<!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+<div class="thanhphai">
+    <a target="_self" href="ngamhat.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+</div>
+<div class="thanhtrai">
+    <a target="_self" href="luachonmaylamsua.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+   
+
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+<div id="backtop1" class="vecuoitrang" >
+    <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+</div>
+<div id="backtop" class="vedautrang">
+    <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+
+  
+<div class="content">
+    <h3 class="tieudenhomnguyenlieu">THÀNH PHẦN CƠ BẢN CỦA SỮA HẠT</h3>
+    <div style="margin-top: 10px;" align="center"><img src="/duongmulti/thdu4.png" width="100%"></div>
+    <hr>
+    <!-- <div align="center" style="padding-top: 10px;"><img src="/1.png"></div> -->
+    <div id="boxloiich" style="padding: 20px">
+    
+        <p>Không nhất thiết một ly sữa hạt phải có đủ các thành phần như trên, tuỳ thuộc vào
+            sở thích mà các bạn có thể lựa chọn thêm hoặc bớt các thành phần.</p>
+        <p>Chi tiết từng thành phần mình có hướng dẫn ở phía sau, các bạn tiếp tục tham khảo
+            nhé!</p>
+        
+    </div>
+    <hr>
+    <h4 class="tieudenhomnguyenlieu">
+        Các thành phần
+    </h4>
+    <div id="stylecongthuc">
+        <a href="#ct1"><p class="tieudenhomnguyenlieu1">Nguyên liệu chính</p></a>
+        <a href="#ct2"><p class="tieudenhomnguyenlieu1">Chất lỏng</p></a>
+        <a href="#ct3"><p class="tieudenhomnguyenlieu1">Muối</p></a>
+        
+    </div>
+    <div id="stylecongthuc">
+        <a href="#ct4"><p class="tieudenhomnguyenlieu1">Nguyên liệu tạo ngọt</p></a>
+        <a href="#ct5"><p class="tieudenhomnguyenlieu1">Nguyên liệu tạo hương</p></a>
+        <a href="#ct6"><p class="tieudenhomnguyenlieu1">Nguyên liệu tạo màu</p></a>
+        
+    </div>
+    <hr>
+    <p id="ct1" align="center">
+        <b><span style='font-size:30px;'>&#129371;</span>Nguyên liệu chính trong sữa hạt <span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+    <p>Nếu bạn muốn uống sữa với vị nguyên bản thì chỉ cần dùng nhóm nguyên liệu chính
+        này kết hợp với chất lỏng là được.
+    </p>
+    <p>Rất nhiều loại có thể dùng để nấu sữa. Dựa vào những loại có nhiều điểm giống
+        nhau, chúng ta có thể phân làm 5 nhóm cơ bản, từng nhóm sẽ có những đặc tính và
+        tỷ lệ với chất lỏng khác nhau.</p>
+    <table border="1">
+        <tr>
+            <th>A. Nhóm đậu</th>
+        </tr>
+        <tr>
+            <td>- Bao gồm: Đậu xanh, đậu đỏ, đậu đen, đậu nành, đậu
+                Hà Lan, đậu lăng, đậu gà...<br>
+                - Đặc tính: Sữa có nhiều tinh bột, hơi sánh.<br>
+                - Tỷ lệ với chất lỏng: 100g hạt - 1000 - 1200ml<br></td>
+                <td><img src="/duongmulti/thdu5.png" width="200px"></td>
+        </tr>
+        <tr>
+            <th>B. Nhóm hạt có dầu</th>
+        </tr>
+        <tr>
+            <td>- Bao gồm: Mè, lạc, hạt bí, hạt hướng dương, hạt thông,
+                hạt gai dầu, hạt lanh. <br>
+                - Đặc tính: Có độ béo, sữa lỏng, dễ tách lớp.<br>
+                - Tỷ lệ với chất lỏng: 100g hạt – 900 - 1000ml<br></td>
+                <td><img src="/duongmulti/thdu6.png" width="200px"></td>
+        </tr>
+        <tr>
+            <th>C. Nhóm quả hạch</th>
+        </tr>
+        <tr>
+            <td>- Bao gồm: Hạt điều, hạnh nhân, hạt óc chó, macca...<br>
+                - Đặc tính: Béo ngậy, sữa lỏng, dễ phân tầng.<br>
+                - Tỷ lệ với chất lỏng: 100g hạt 900 1000ml.</td>
+                <td><img src="/duongmulti/thdu7.png" width="200px"></td>
+        </tr>
+        <tr>
+            <th>D. Nhóm ngũ cốc</th>
+        </tr>
+        <tr>
+            <td>- Bao gồm: Diêm mạch, yến mạch, hạt kê, gạo lứt, cốm...<br>
+                - Đặc tính: Có độ sệt, sánh, không quá béo.<br>
+                - Tỷ lệ với chất lỏng: 100g hạt - 1500 1700ml.</td>
+                <td><img src="/duongmulti/thdu8.png" width="200px"></td>
+        </tr>
+        <tr>
+            <th>E. Nhóm nguyên liệu tươi</th>
+        </tr>
+        <tr>
+            <td>- Bao gồm: Khoai lang, khoai môn, hạt sen, dừa, bí đỏ,
+                sake,...<br>
+                - Đặc tính: Có độ sệt, sánh, thơm.<br>
+                - Tỷ lệ với chất lỏng: 150g - 1000ml.</td>
+                <td><img src="/duongmulti/thdu9.png" width="200px"></td>
+        </tr>
+    </table>
+    <hr>
+    <p id="ct2" align="center">
+        <b><span style='font-size:30px;'>&#129371;</span>Chất lỏng <span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+
+    <p>Nước chiếm tỷ lệ lớn và có vai trò quan trọng, có khả năng cung cấp khoáng chất và
+        vận chuyển các chất dinh dưỡng đi khắp cơ thể. Vậy nên, việc lựa chọn nguồn nước
+        sạch để làm sữa là rất quan trọng.
+    </p>
+    <p>Trong sữa hạt, nước là nguyên liệu giúp hòa các chất dinh dưỡng và các hợp
+        chất khác trong sữa, nhằm tạo thành một loại thức uống giàu chất dinh dưỡng.</p>
+<div style="padding: 20px; border: 1px solid; border-radius: 20px; background-color: rgb(248, 255, 180);">
+    <p>Lưu ý khi sử dụng nước để nấu sữa</p>
+    <p>Nên dùng nước sôi để nguội.
+        Không được dùng nước ngâm hạt để nấu sửa.
+        Ngoài nước đun sôi để nguội, bạn có thể dùng để nấu sữa sẽ giúp sữa có hương thơm
+        tự nhiên:<br>
+        <ul>
+            <li>Nước luộc ngô</li>
+            <li>Nước luộc lá dứa</li>
+            <li>Nước luộc hạt sen</li>
+        </ul>
+    </p>
+</div>
+   
+    <p>
+        Lượng nước dùng để nấu sữa sẽ phụ thuộc vào sở thích uống loãng hay đặc của các
+bạn. Các bạn có thể trải nghiệm và tăng hoặc giảm lượng nước được giới thiệu trong
+sách nhé.
+    </p>
+
+    <hr>
+    <p id="ct3" align="center">
+        <b><span style='font-size:30px;'>&#129371;</span>Muối <span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+    <div style="margin-top: 10px;" align="center"><img src="/duongmulti/thdu10.png" width="100%"></div>
+    <p>Trong muối chứa hàm lượng khoảng chất dồi dào như natri, kali..</p>
+    <p>Các khoảng chất này có vai trò quan trọng trong cân bằng điện giải của cơ thể, giúp
+        duy trì hoạt động tế bào, chức năng cơ bắp và các quá trình sinh hóa.</p>
+    <p>Ngoài ra, việc thêm muối vào sữa còn có các công dụng như:</p>
+    <ul>
+        <li>Giúp cân bằng hương vị</li>
+        <li>Giúp sữa đậm đà hơn</li>
+        <li>Tăng tính kiềm cho sữa</li>
+    </ul>
+    <p>Tuy nhiên, việc sử dụng muối nên tuân thủ lượng
+        muối khuyến nghị hằng ngày để đảm bảo sức
+        khỏe.</p>
+    <p>Sử dụng quá nhiều muối có thể gây tác động tiêu
+        cực như tăng nguy cơ bệnh tim mạch và tăng
+        huyết áp.</p>
+    <p>Để tốt hơn cho sức khỏe, bạn nên chọn một số
+        muối tự nhiên như:</p>
+    <div style="margin-top: 10px;" align="center"><img src="/duongmulti/anhmuoi.png" width="60%"></div>
+    
+    <hr>
+    <p id="ct4" align="center">
+        <b><span style='font-size:30px;'>&#129371;</span>Nguyên tạo ngọt<span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+    <div style="margin-top: 10px;" align="center"><img src="/duongmulti/thdu11.png" width="100%"></div>
+    <p align="center">
+        <b><span style='font-size:25px;'>&#129371;</span>Đường phèn<span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+    <div style="margin-top: 10px;" align="center"><img src="/duongmulti/thdu12.png" width="100%"></div>
+    <p>Trong các loại nguyên liệu tạo ngọt thì đường phèn là loại nguyên liệu mà mình cảm
+        thấy dễ sử dụng, dễ chế biến, ít bị ảnh hưởng màu sắc và mùi vị của sửa nhất.</p>
+    <p>Vậy nên trong cuốn sách này, mình sẽ hướng dẫn cho các bạn cách chế biến và sử
+        dụng đường phèn làm nguyên liệu tạo ngọt chủ đạo. Các nguyên liệu còn lại tùy vào
+        sở thích hoặc độ ngọt mà các bạn thể sử dụng linh động nhé.</p>
+    <p>Các bạn có thể dùng đường phèn thô, cho trực tiếp vào sữa khi nấu hoặc có thể nấu
+        nước đường phèn để chủ động độ ngọt giữa các thành viên trong gia đình sau khi
+        nấu sữa xong.</p>
+    <p>Dưới đây là công thức làm nước đường phèn, các bạn tham khảo nhé:</p>
+    <table border="1">
+        <tr>
+            <td>Nguyên liệu<br>
+                • Nước: 700 - 800ml<br>
+                • Đường phèn: 500g<br>
+                • Muối: 1g</td>
+            <td>Cách làm<br>
+                • Nấu sôi nước cùng muối, sau đó cho
+                đường vào nấu cho đến khi đường tan.<br>
+                • Để nguội và cho vào chai thủy tinh.<br>
+                • Bảo quản trong ngăn mát tủ lạnh.</td>
+        </tr>
+    </table>
+    <p>Sau khi sửa nấu xong, các bạn có thể cho nước đường vào khuấy đều theo độ ngọt
+        tùy thích.</p>
+    <p>Hoặc nếu gia đình có nhiều sở thích khác nhau, bạn có thể nấu sữa không đường,
+        khi nào dùng sẽ cho nước đường vào sau nhé.</p>
+
+    <hr>
+    <p id="ct5" align="center">
+        <b><span style='font-size:30px;'>&#129371;</span>Nguyên tạo hương<span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+    <p>Sữa hạt sen, sữa mè, sữa hạt điều... khi nấu sẽ có hương thơm tự nhiên. Tuy nhiên
+        cũng có nhiều loại sữa không có hương thơm đặc trưng, vì vậy để những loại sữa đó
+        trở nên thơm ngon và dễ uống hơn, các bạn có thể kết hợp nấu cùng với một số
+        nguyên liệu dưới đây nhé!</p>
+    <table border="1"  >
+        <tr >
+            <td style="text-align: center;">Vani<br>
+                <img src="/duongmulti/thdu13.png" width="100px"><br>
+                Bạn có thể dùng: vani quả,
+                vani nước, bột vani</td>
+                <td style="text-align: center;">Lá nếp<br>
+                    <img src="/duongmulti/thdu14.png" width="100px"><br>
+                    Bạn có thể dùng: lá
+                    dứa khô, lá dứa tươi</td>
+                <td style="text-align: center;">Hoa khô<br>
+                        <img src="/duongmulti/thdu15.png" width="100px"><br>
+                        Bạn có thể dùng: hoa nhài, hoa hồng, hoa cúc</td>
+        </tr>
+        <tr >
+            <td style="text-align: center;">Matcha<br>
+                <img src="/duongmulti/thdu16.png" width="100px"><br>
+                Bạn có thể dùng: bột
+matcha. Pha theo định
+lượng 5-10g bột:1 lít sữa</td>
+                <td style="text-align: center;">Cacao<br>
+                    <img src="/duongmulti/thdu17.png" width="100px"><br>
+                    Bạn có thể dùng: Bột
+cacao pha theo định
+lượng 5-10g: 1 lít sữa</td>
+                <td style="text-align: center;">Hoa khô<br>
+                        <img src="/duongmulti/thdu18.png" width="100px"><br>
+                        Bạn có thể dùng: Bột
+quế pha theo định lượng
+5-10g: 1 lít sữa</td>
+        </tr>
+    </table>
+
+    <hr>
+    <p id="ct6" align="center">
+        <b><span style='font-size:30px;'>&#129371;</span>Nguyên tạo màu<span style='font-size:30px;'>&#129371;</span></b>
+    </p>
+    <div style="margin-top: 10px;" align="center"><img src="/duongmulti/thdu19.png" width="100%"></div>
+    <p>Sữa hạt bình thường vốn đã mang màu sắc khá đẹp, tuy nhiên các bạn có thể kết hợp
+        thêm nguyên liệu tạo màu, vừa làm ly sữa có màu theo ý thích, vừa tăng thêm hương
+        vị và thêm nhiều lợi ích khác về mặt dinh dưỡng.</p>
+    
+    <div style="margin-top: 10px;" align="center"><img  src="/duongmulti/thdu21.png" width="100%"></div>
+    <div style="margin-top: 10px;" align="center"><img  src="/duongmulti/thdu22.png" width="100%"></div>
+    <div style="margin-top: 10px;" align="center"><img  src="/duongmulti/thdu23.png" width="100%"></div>
+    <div style="margin-top: 10px;" align="center"><img  src="/duongmulti/thdu24.png" width="100%"></div>
+    <div style="margin-top: 10px;" align="center"><img  src="/duongmulti/thdu25.png" width="100%"></div>
+    <div style="margin-top: 10px;" align="center"><img src="/duongmulti/thdu26.png" width="100%"></div>
+
+   
+ 
+
+
+
+
+    
+
+    
+    
+</div>   
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+  
+
+
+<!--Phần hihglight popup-->
+<div class="popup" id="highlightPopup">
+    <span>Chọn màu để highlight</span>
+    <button class="yellow" data-color="highlight-yellow">Vàng</button>
+    <button class="green" data-color="highlight-green">Xanh</button>
+    <button class="pink" data-color="highlight-pink">Hồng</button>
+    <button id="removeHighlight">Xoá Highlight</button>
+</div>
+
+
+
+
+    
+<!--Phần footer-->
+<footer>
+    <div class="bentrai">
+        <a target="_self" href="luachonmaylamsua.html"><button id="nut4"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+
+    <p id="textbanquyen"  style="color: rgb(255, 255, 255); text-align: center; font-size: 15px;">Sách thuộc bản quyền của NXB</p>
+
+    <div class="benphai">
+        <a target="_self" href="ngamhat.html"><button id="nut5"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+
+</footer>
+<script>
+    $(function(){
+        $('#contentImage1').bind('contextmenu',function(){ return false;});
+    });
+</script>
+</body>
+<script src="/filenoidunghtml/jschoaudio.js"></script>
+<script src="/filenoidunghtml/jschoslide.js"></script>
+</html>
