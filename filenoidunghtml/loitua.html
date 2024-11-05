@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời tựa</title>
+    <!--DƯỚI ĐÂY LÀ PHẦN STYLE CHUNG CHUNG-->
+<style type="text/css">
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 21px;
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    
+    p{
+        text-indent: 40px;
+    }
+
+
+    #footer{
+        margin: 0 auto;
+        background-color: #ff7272;
+        /* width: 70%; */
+        height: 50px;
+        justify-content: space-between;
+        position: fixed;
+        top:85%;
+        margin: 0;
+        display: none;;
+    }
+    #nut4 i{
+        font-size: 25px;
+    }
+    #nut4{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: posinter;
+    }
+
+    #nut5 i{
+        font-size: 25px;
+    }
+    #nut5{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: pointer;
+    }
+    #fullscreenElement {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+    @media screen and (max-width: 768px) {
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        #anhchuonglon{
+           flex-basis: 300px;
+        }
+        .my-gallery{
+            width: 100%;
+        }
+        img{
+            width:100%;
+        }
+        #backtop1{
+            display: none;
+        }
+        #backtop{
+            display: none;
+        }
+        .thanhtrai{
+            display:none;
+        }
+        .thanhphai{
+            display:none;
+        }
+        #footer{
+            margin: 0px auto;
+            width: 100%;
+            display: block;
+            margin-bottom: 10%;
+        }
+        .benphai{
+            position: absolute;
+            left: 85%;
+            bottom: 5%;
+        }
+    }
+</style>
+
+
+
+<style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHUNG CHUNG-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO MỤC HIGHLIGHT-->
+<style>
+    .highlight-yellow { background-color: rgb(255, 255, 71); }
+    .highlight-red { background-color: rgb(132, 230, 255); }
+    .highlight-green { background-color: rgb(125, 255, 125); }
+    .highlight-popup {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1000;
+    }
+    .highlight-popup button {
+        margin-right: 10px;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO MỤC HIGHLIGHT-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO MỤC TRẢ LỜI CÂU TƯƠNG TÁC-->
+<style>
+    #textArea {
+        width: 100%;
+        height: 200px;
+    }
+    #saveButton, #clearButton {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO MỤC TRẢ LỜI CÂU TƯƠNG TÁC-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO CHÚ THÍCH-->
+<style type="text/css">
+    a:hover{
+            text-decoration: none;
+        }
+        a[data-tooltip]{
+            border-bottom: 1px dotted #333;
+            position:relative;
+        }
+        a[data-tooltip]::before{
+            content: attr(data-tooltip);
+            position:absolute;
+            background: #ffafaf;
+            font-size:14px;
+            color: black;
+            text-align: justify;
+            padding: 3px 9px;
+            border-radius: 6px;
+            width: 250px;
+            left: -800%;
+            right: -800%;
+            bottom: 100%;
+            display: none;
+        }
+    a[data-tooltip]:hover::before{
+        display: block;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO CHÚ THÍCH-->
+<link rel="stylesheet" href="cssnoidung.css">
+
+<body id="text" >
+
+
+
+    <div id="footer">
+        <div class="bentrai">
+            <a target="_self" href="danhriengchodocgiavn.html"><button id="nut4"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+        </div>
+        <div class="benphai">
+            <a target="_self" href="Chuong1phan1.html"><button id="nut5"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+        </div>
+    </div>
+
+
+
+
+    
+<div>
+     <!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+     <div class="thanhphai">
+        <a target="_self" href="Chuong1phan1.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+    <div class="thanhtrai">
+        <a target="_self" href="danhriengchodocgiavn.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+    <!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+
+<!--DƯỚI ĐÂY LÀ PHẦN PHẦN POP UP ĐỂ HIGHLIGHT-->
+    <div class="highlight-popup" id="highlight-popup">
+        <!-- <p align="center" id="takenote">Ghi chú</p> -->
+        <button onclick="highlightText('yellow')" id="notevang"><i class="bi bi-square-fill"></i></button>
+        <button onclick="highlightText('red')" id="notedo"><i class="bi bi-square-fill"></i></button>
+        <button onclick="highlightText('green')" id="notexanh"><i class="bi bi-square-fill"></i></button>
+        <button onclick="removeHighlight()" id="xoanote"><i class="bi bi-eraser-fill"></i></i></button>
+    </div>
+<!--TRÊN ĐÂY LÀ PHẦN PHẦN POP UP ĐỂ HIGHLIGHT-->
+
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+<div id="backtop1" class="vecuoitrang" >
+    <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+</div>
+<div id="backtop" class="vedautrang">
+    <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG--> 
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO NÚT BACK TO TOP-->
+<script>
+    function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function scrollToBottom() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO NÚT BACK TO TOP--> 
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC HIGHLIGHT-->
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    loadHighlights();
+
+    document.addEventListener('mouseup', function(e) {
+        const selection = window.getSelection();
+        if (!selection.rangeCount || selection.isCollapsed) {
+            hidePopup();
+            return;
+        }
+
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        showPopup(rect.left + window.scrollX, rect.bottom + window.scrollY);
+    });
+
+    document.addEventListener('mousedown', function(e) {
+        const popup = document.getElementById('highlight-popup');
+        if (!popup.contains(e.target)) {
+            hidePopup();
+        }
+    });
+});
+
+function showPopup(x, y) {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.left = x + 'px';
+    popup.style.top = y + 'px';
+    popup.style.display = 'block';
+}
+
+function hidePopup() {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.display = 'none';
+}
+
+function highlightText(color) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    if (range.collapsed) return;
+
+    const span = document.createElement('span');
+    span.className = `highlight highlight-${color}`;
+    range.surroundContents(span);
+
+    saveHighlights();
+    hidePopup();
+}
+
+function removeHighlight() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    const parentElement = range.commonAncestorContainer.parentElement;
+
+    if (parentElement.classList.contains('highlight')) {
+        const parent = parentElement.parentNode;
+        while (parentElement.firstChild) {
+            parent.insertBefore(parentElement.firstChild, parentElement);
+        }
+        parent.removeChild(parentElement);
+    }
+
+    saveHighlights();
+    hidePopup();
+}
+
+// Hàm lưu các highlight vào local storage
+function saveHighlights() {
+    let highlights = document.querySelectorAll('.highlight-yellow, .highlight-green, .highlight-red');
+    let highlightData = [];
+
+    highlights.forEach((highlight) => {
+        highlightData.push({
+            text: highlight.textContent,
+            class: highlight.className
+        });
+    });
+
+    localStorage.setItem('highlights', JSON.stringify(highlightData));
+}
+// Hàm tải các highlight từ local storage
+function loadHighlights() {
+    let highlightData = JSON.parse(localStorage.getItem('highlights') || '[]');
+    let bodyHtml = document.body.innerHTML;
+
+    highlightData.forEach((highlight) => {
+        let tempDiv = document.createElement('div');
+        tempDiv.textContent = highlight.text;
+        let highlightHtml = `<span class="${highlight.class}">${tempDiv.innerHTML}</span>`;
+        bodyHtml = bodyHtml.replace(highlight.text, highlightHtml);
+    });
+    document.body.innerHTML = bodyHtml;
+}
+
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC HIGHLIGHT-->
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC CỦA CÂU HỎI TƯƠNG TÁC-->
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const textArea = document.getElementById('textArea');
+    const saveButton = document.getElementById('saveButton');
+    const clearButton = document.getElementById('clearButton');
+
+    // Load the saved text from Local Storage when the page loads
+    const savedText = localStorage.getItem('textAreaContent');
+    if (savedText) {
+        textArea.value = savedText;
+    }
+
+    // Save the text to Local Storage when the "Save" button is clicked
+    saveButton.addEventListener('click', function() {
+        localStorage.setItem('textAreaContent', textArea.value);
+        alert('Bạn muốn lưu ghi chép của mình?');
+    });
+
+    // Clear the text from Local Storage and the text area when the "Clear" button is clicked
+    clearButton.addEventListener('click', function() {
+        localStorage.removeItem('textAreaContent');
+        textArea.value = '';
+        alert('Bạn muốn xóa ghi chép?');
+    });
+});
+
+</script> -->
+<script>
+    // Function to save data to local storage
+    function saveData(id) {
+        const data = document.getElementById(id).value;
+        localStorage.setItem(id, data);
+        alert('Câu trả lời của bạn đã được lưu!');
+    }
+
+    // Function to load data from local storage
+    function loadData() {
+        const writingAreas = document.querySelectorAll('.writing-area');
+        writingAreas.forEach(area => {
+            const savedData = localStorage.getItem(area.id);
+            if (savedData) {
+                area.value = savedData;
+            }
+        });
+    }
+
+    // Load data when the page loads
+    window.onload = loadData;
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC CỦA CÂU HỎI TƯƠNG TÁC-->
+
+<!--PHẦN BẮT ĐẦU NỘI DUNG CHÍNH-->
+
+<!-- <div id="fullscreenElement">
+    <h1>Tap to Toggle Fullscreen</h1>
+</div>
+
+<script>
+    // Function to toggle fullscreen mode
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            // Request fullscreen
+            document.documentElement.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+            });
+        } else {
+            // Exit fullscreen
+            document.exitFullscreen().catch(err => {
+                console.error(`Error attempting to exit full-screen mode: ${err.message} (${err.name})`);
+            });
+        }
+    }
+
+    // Add touch event listener for mobile responsiveness
+    document.getElementById('fullscreenElement').addEventListener('touchstart', toggleFullscreen);
+</script> -->
+
+<h1 align="center">
+  Lời tựa 
+</h1>
+<p>
+    <span style="font-style: italic;"> Hiểu và thưởng thức một tác phẩm mỹ thuật</span> được viết cho những người chưa biết gì về nghệ thuật. Nếu bạn còn lạ lẫm với nghệ thuật phương Tây, bạn sẽ có dịp tìm hiểu về điều đó trong quyển sách này. Nếu bạn chưa bao giờ ghi chép, bạn sẽ được dịu dàng hướng dẫn cách viết cảm nhận. Và nếu như bạn đã quá quen thuộc với cả nghệ thuật lẫn việc ghi chép, bạn sẽ được học lại cách nhìn cuộc sống với trí tò mò và đôi mắt tươi mới.
+</p>
+<p>
+    “Ba! Nhìn kìa ba. Bức tranh kia đẹp quá!”
+</p>
+<p>
+    Vào một ngày nọ, giữa bảo tàng Musee d'Orsay đông đúc, giọng một cậu bé người Mỹ khiến tôi chú ý. Nguyên nhân của sự phấn khích ấy là một bức tranh tĩnh vật tràn đầy sức sống của Van Gogh với chiếc bình đồng và những bông hoa màu cam. Tôi liếc nhìn cậu bé. Mắt cậu hết sức hào hứng, nụ cười thì đầy sức lan tỏa. Chiếc mũ bóng chày trông có vẻ hơi quá khổ so với đầu cậu. Vào khoảnh khắc đó, xảy ra cách đây rất lâu rồi ở Paris, chàng cầu thủ nhí yêu nghệ thuật ấy đã khẳng định một điều mà tôi hiểu đã nằm trong xương tủy mình tự bao giờ, đó là: Nghệ thuật là chốn tất cả chúng ta đều có thể đến - bất kể tuổi tác hay hoàn cảnh - để tìm thấy niềm vui, nguồn cảm hứng và sự hiểu biết.
+</p>
+<p>
+    Chưa hết. Mỗi năm, hàng triệu người chúng ta đi đến các bảo tàng và phòng trưng bày để đứng trước các tác phẩm nghệ thuật. Chúng ta có thể bước qua những cánh cửa ấy để đi tìm sự kết nối với tâm hồn con người, hay chỉ là tìm kiếm một nơi yên tĩnh thoát khỏi tiếng ồn của thành phố. Bất kể động cơ là gì, chúng ta cũng thấy mình đang đứng trước một bức tranh hay bức tượng nào đó, và cảm nhận một khoảnh khắc “giác ngộ” chớp nhoáng, gần như là thoáng qua rất khẽ. Nhưng rõ ràng là có. Liệu chúng ta có muốn tìm hiểu về nó không?
+</p>
+<p>
+    Tôi đã nhìn thấy sự “ngộ ra” này trong tất cả các lớp lịch sử mỹ thuật mình từng dạy. Trong nhiều năm, các sinh viên đã chân thành chia sẻ những trải nghiệm của họ với tôi, thường họ nói rằng, “Lớp học này đã thay đổi cuộc đời em!”. Bằng cách chứng nhận về sức mạnh của nghệ thuật, các sinh viên này đã thể hiện chính xác mối liên hệ rất nhân bản mà nghệ thuật đã đem lại cho chúng ta. Dù đó là bức tranh của Vermeer đang chỉ cho chúng ta thấy vẻ đẹp giản dị của việc tưới cây, hay bức <span style="font-style: italic;">Người uống rượu absinthe</span> của Degas đang thì thầm “khi quá chén, bạn trông như thế này đây”, nghệ thuật có thể chạm đến nơi nhân tính trú ngụ trong ta.
+</p>
+<p>
+    Tuy vậy, dù chúng ta có thể hiểu về bức Mona Lisa (hay bất kỳ một tác phẩm nào khác) khi tìm hiểu xem bức tranh có thể tiết lộ gì về nàng, thì đó vẫn chỉ là một phần của việc nghiên cứu. Có lẽ, giá trị trường tồn nhất của nghệ thuật mang tính cá nhân hơn nhiều. Nghệ thuật có khả năng truyền cho ta nhận thức chắc chắn về cuộc sống độc đáo của mỗi chúng ta bằng cách mang ta đến đối diện với chính mình. <span style="font-style: italic;">Hiểu và thưởng thức một tác phẩm mỹ thuật</span> là một chuyến tham quan đầu tiên xuyên suốt nghệ thuật phương Tây. Nó sẽ dừng lại và lưu ý ta rằng nghệ thuật có thể giúp ta hiểu sâu về bản thân và nhìn thấu suốt cuộc đời ta như thế nào.
+</p>
+<p style="font-weight: bold;">Đôi lời về phong cách nghệ thuật</p>
+<p>
+    Có thể lúc đầu bạn sẽ gặp một vài từ nghe có vẻ nghệ thuật xuất hiện liên tục từ đầu đến cuối quyển sách này, chúng diễn tả phong cách chung của tác phẩm đang được nói tới. Mỗi tác phẩm nghệ thuật đều có thể mô tả được về mặt phong cách. Màu được xử lý như thế nào, hình được vẽ ra sao, màu nào là màu chủ đạo - tất cả những điều này tác động lên phong cách của một bức tranh. Và cũng chính phong cách cá nhân của một nghệ sĩ “đóng dấu” lên tác phẩm của họ. Mỗi xu hướng trong nghệ thuật cũng có phong cách riêng của nó. Rồi bạn sẽ thấy, ví dụ phong cách Baroque Ý chuyển sang một hướng mới, thoát ly khỏi phong cách Phục hưng Ý trước đó. Bây giờ, hãy xem qua bốn từ được dùng để nói về phong cách chung của một tác phẩm nghệ thuật: hiện thực, tượng trưng, biểu hiện, và trừu tượng.
+</p>
+<p>
+    Tôi sẽ lấy Carl, chú mèo của chúng tôi, làm chủ đề.
+</p>
+<p style="font-style: italic;">
+    Nghệ thuật Hiện thực
+</p>
+<p>
+    Nếu một bức tranh mang phong cách hiện thực, nó sẽ thuyết phục bạn rằng bạn đang nhìn vào một thứ “có thật” là chú mèo Carl. Màu sắc, cảm giác về không gian ba chiều, và cách vẽ chính xác sẽ khiến cho bạn tin rằng Carl đang ở trên tường [trong bức tranh]. Và mọi người đều sẽ đồng tình như vậy.
+</p>
+<p style="font-style: italic;">
+    Nghệ thuật Tượng trưng
+</p>
+<p>
+    Carl vẫn đang ở trên tường, nhưng giờ đây điều duy nhất mọi người đồng tình là bức tranh vẽ một con mèo. Phải, tôi thấy đôi mắt, cái mũi, bộ ria, và chiếc đuôi nhưng giờ đây Carl trông như thể vừa ăn một chú chuột thời tiền sử. Nghệ thuật tượng trưng vẫn dựa trên hiện thực, nhưng người nghệ sĩ thể hiện nó theo cách riêng của mình.
+</p>
+<p style="font-style: italic;">
+    Nghệ thuật Biểu hiện
+</p>
+<p>
+    Chú chuột cổ kia chẳng còn phù hợp với Carl nữa. Trong nghệ thuật biểu hiện, chúng ta vẫn biết rằng thứ mình đang nhìn là một con mèo, nhưng giờ đây phản ứng tức thì chính là cảm xúc. Bạn có thể cảm thấy cồn cào, sôi sục trong dạ dày, hay đơn giản chỉ là rất buồn. Bạn cũng có thể cảm thấy phấn khởi, thậm chí sướng mê ly. Người nghệ sĩ đã cường điệu hóa màu sắc, những nhát cọ hay hình để đẩy cảm xúc của chúng ta lên cao trào. Đôi mắt sưng húp, đỏ hoe và cái bụng mềm oặt của Carl có thể sẽ khiến tất cả chúng ta phải thốt lên, “tội nghiệp chú mèo con”.
+</p>
+<p style="font-style: italic;">
+    Nghệ thuật Trừu tượng
+</p>
+<p>
+    Carl bây giờ đã được giản lược thành những đường nét và màu sắc: một đốm đen ở đây, một chấm trắng ở kia, thêm ba vạch và bạn có một bộ ria. Nghệ thuật trừu tượng dựa vào những yếu tố thị giác cơ bản để diễn tả những chủ đề của mình. Và cho dù bạn có thể chắc chắn rằng mình đang nhìn thấy chú mèo Carl, hay một buổi hoàng hôn, hoặc một con gà, chỉ cần hỏi những người bên cạnh xem họ nhìn thấy gì. Nếu có năm người, có thể bạn sẽ nhận được năm cách diễn giải khác nhau. Và tất cả đều “đúng”.
+</p>
+
+<!--DƯỚI ĐÂY LÀ PHẦN ĐIỀN CÂU HỎI TƯƠNG TÁC-->
+
+<div>
+    <p align="center" style="margin-top: 0px; margin-bottom: 10px;; font-size: 30px; font-weight: bold;">&#128366;</p>
+    <p align="center" style="margin-top: 0px;"><img src="/fileanhhtml/linbreak.png" width="280px"></p>
+</div>
+<p>
+    <b>Câu 1: Tường nhà bạn đang treo những gì? Phong cách nào được thể hiện nhiều nhất?</b>
+</p>
+<p>
+    <b>Bạn muốn hiểu hết những gì mình đang xem, như thể bạn đang nhìn ra ngoài cửa sổ (nghệ thuật hiện thực)? Hay...</b>
+</p>
+<p>
+    <b>Bạn cũng muốn hiểu những điều mình nhìn thấy nhưng lại thích nó được biến đổi đôi chút bởi người họa sĩ (nghệ thuật tượng trưng)? Hay...</b>
+</p>
+<p>
+    <b>Bạn muốn bị lay động ngay tức khắc bởi những màu sắc và nhát cọ giàu cảm xúc, muốn cảm thấy những cú múa cọ của người họa sĩ khi cô ấy hối hả quét sơn lên mặt toan (nghệ thuật biểu hiện)? Hay...</b>
+</p>
+<p>
+    <b>Bạn muốn nếm trải một bí ẩn không tên khi nhìn vào một bức tranh (nghệ thuật trừu tượng)? Hay...</b>
+</p>
+<p>
+    <b>Bạn thích một sự đa dạng trong phong cách? Hãy nghĩ xem tại sao bạn lại bị cuốn hút bởi một phong cách nhất định mà không phải là một phong cách khác?</b>
+</p>
+<textarea id="writingArea1" class="writing-area" placeholder="Nhập câu trả lời của bạn ở đây"></textarea>
+<button class="save-button" onclick="saveData('writingArea1')">Lưu</button>
+</div>
+<p><br></p>
+<p><br></p>
+</body>
+</html>
+<!--TRÊN ĐÂY LÀ PHẦN ĐIỀN CÂU HỎI TƯƠNG TÁC-->

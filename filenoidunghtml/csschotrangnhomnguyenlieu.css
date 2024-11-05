@@ -1,0 +1,42 @@
+.tieudenhomnguyenlieu{
+    text-align: center;
+    border: 1px solid;
+    background-color: rgb(242, 255, 183);
+    color: black;
+    border-radius: 20px;
+    width: 50%;
+    padding: 5px 5px;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+.effect2{
+    border: 3px dotted rgb(0, 0, 0);
+    background-color: rgba(247, 255, 209, 0.774);
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 2px 2px;
+    
+}
+.effect3{
+    display:flex;
+    justify-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.effect4{
+    display:flex;
+    justify-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+/* .effect3 a img{
+    filter:  drop-shadow(5px 5px 5px #faffb1);
+} */
+.effect3 a:hover{
+    opacity: 0.8;
+    filter:  drop-shadow(5px 5px 5px #f9ff9ed2);
+}
+.effect4 a:hover{
+    opacity: 0.6;
+    filter:  drop-shadow(5px 5px 5px #f9ff9ed2);
+}

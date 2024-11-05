@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dành riêng cho độc giả Việt Nam</title>
+    <!--DƯỚI ĐÂY LÀ PHẦN STYLE CHUNG CHUNG-->
+<style type="text/css">
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 21px;
+        max-width: 960px;
+        margin: 0 auto;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    p{
+        text-indent: 40px;
+    }
+
+
+    #footer{
+        margin: 0 auto;
+        background-color: #ff7272;
+        /* width: 70%; */
+        height: 50px;
+        justify-content: space-between;
+        position: fixed;
+        top:85%;
+        margin: 0;
+        display: none;;
+    }
+    #nut4 i{
+        font-size: 25px;
+    }
+    #nut4{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: posinter;
+    }
+
+    #nut5 i{
+        font-size: 25px;
+    }
+    #nut5{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        #anhchuonglon{
+           flex-basis: 300px;
+        }
+        .my-gallery{
+            width: 100%;
+        }
+        img{
+            width:100%;
+        }
+        #backtop1{
+            display: none;
+        }
+        #backtop{
+            display: none;
+        }
+        .thanhtrai{
+            display:none;
+        }
+        .thanhphai{
+            display:none;
+        }
+        #footer{
+            margin: 0px auto;
+            width: 100%;
+            display: block;
+            margin-bottom: 10%;
+        }
+        .benphai{
+            position: absolute;
+            left: 85%;
+            bottom: 5%;
+        }
+
+    }
+</style>
+<style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHUNG CHUNG-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO MỤC HIGHLIGHT-->
+<style>
+    .highlight-yellow { background-color: rgb(255, 255, 71); }
+    .highlight-red { background-color: rgb(132, 230, 255); }
+    .highlight-green { background-color: rgb(125, 255, 125); }
+    .highlight-popup {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1000;
+    }
+    .highlight-popup button {
+        margin-right: 10px;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO MỤC HIGHLIGHT-->
+
+<link rel="stylesheet" href="cssnoidung.css">
+<link rel="stylesheet" href="/filenoidunghtml/csschokoto.css">
+</head>
+<body id="text" >
+
+
+
+
+    <div id="footer">
+        <div class="bentrai">
+            <a target="_self" href="/Fileanhchogiaodien/trangchiutrachnhiemxuatban.html"><button id="nut4"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+        </div>
+        <div class="benphai">
+            <a target="_self" href="loitua.html"><button id="nut5"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+        </div>
+    </div>
+
+<!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+    <div class="thanhphai">
+        <a target="_self" href="loitua.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+    <div class="thanhtrai">
+        <a target="_self" href="/Fileanhchogiaodien/trangchiutrachnhiemxuatban.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+<!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+
+<!--DƯỚI ĐÂY LÀ PHẦN PHẦN POP UP ĐỂ HIGHLIGHT-->
+    <div class="highlight-popup" id="highlight-popup">
+        <!-- <p align="center" id="takenote">Ghi chú</p> -->
+        <button onclick="highlightText('yellow')" id="notevang"><i class="bi bi-square-fill"></i></button>
+        <button onclick="highlightText('red')" id="notedo"><i class="bi bi-square-fill"></i></button>
+        <button onclick="highlightText('green')" id="notexanh"><i class="bi bi-square-fill"></i></button>
+        <button onclick="removeHighlight()" id="xoanote"><i class="bi bi-eraser-fill"></i></i></button>
+    </div>
+<!--TRÊN ĐÂY LÀ PHẦN PHẦN POP UP ĐỂ HIGHLIGHT-->
+
+<!--PHẦN BẮT ĐẦU NỘI DUNG CHÍNH-->
+<h1 align="center">
+    LỜI MỞ ĐẦU 
+</h1>
+<div id="isaudio" align="center">
+        
+    <audio controls="controls" src="/Filemusic/Thdu1.mp3"></audio><br/></p>
+</div>
+
+<div id="isaudio" align="center">
+        
+    <audio controls="controls" src="/Filemusic/baoquan.mp3"></audio><br/></p>
+</div>
+<p>
+    Uống sữa hạt không? không chỉ đơn thuần là một tập hợp công thức chế biến sữa
+hạt và các món ăn từ hạt. Nó còn là một hành trình tâm huyết, một câu chuyện được
+viết bằng đam mê và kinh nghiệm thực tế
+</p>
+<p>
+    Sau 8 năm làm việc và đào tạo về lĩnh vực ăn uống Eat Clean & Healthy mình nhận
+thấy vấn đề dinh dưỡng và sức khỏe đang được mọi người rất quan tâm. Việc mọi
+người sử dụng nước ép, sinh tố hay sữa hạt mỗi ngày đã không còn chỉ là trào lưu,
+mà là nhu cầu thiết yếu của mỗi cá nhân, mỗi gia đình.
+</p>
+<p>
+    Sữa hạt là một loại thức uống lành tính, nên bất kỳ đối tượng nào cũng đều có thể
+sử dụng và xem như một loại thức uống cân bằng dinh dưỡng hằng ngày
+</p>
+<p>
+    Sức khỏe, hương vị và những lợi ích bền vững: Những người yêu thích sửa hạt sẽ
+khẳng định rằng điểm mạnh của sản phẩm này không chỉ giới hạn ở vị ngon miệng.
+Với tính chất không chứa lactose và là nguyên liệu thuần chay, sữa hạt đáp ứng nhiều
+nhu cầu dinh dưỡng khác nhau. Nó đã trở thành một phần quan trọng của chế độ ăn
+lành mạnh, hỗ trợ người ưa thích chế độ ăn chay, những người không dung nạp
+lactose và những người theo đuổi lối sống ăn uống lành mạnh và có trách nhiệm với
+môi trường.
+</p>
+<p>
+    Ngoài ra, mình nhận thấy nhu cầu sử dụng sữa hạt ngày càng tăng, tạo ra một cơ hội
+kinh doanh mới trong ngành này. Thị trưởng đang mở rộng với đa dạng các loại sữa
+hạt để phục vụ nhiều nhu cầu của khách hàng. Khởi nghiệp với một cửa hàng đồ
+uống sữa hạt có thể mang lại nguồn lợi nhuận hấp dẫn. Uống sữa hạt không? có thể
+trang bị cho bạn thêm nhiều kiến thức để bước chân vào mô hình kinh doanh này.
+</p>
+<div><img src="/Nhom13_Hieuvathuongthucmottacphammythuat - Copy/fileanhhtml/Cooking Class for Beginner!.png"></div>
+<div align="center">
+    <video controls="controls" src="/Filemusic/thduvideo.mp4" width="100%"></video>
+</div>
+<div><img src="/Fileanhchogiaodien/thdu2.png"></div>
+<div><img src="/Fileanhchogiaodien/thdu3.png"></div>
+<div><img src="/Fileanhnoidung/thdu5.png"></div>
+<div><img src="/Fileanhchogiaodien/đậu xanh.png" width="100%"></div>
+<div><img src="/Fileanhchogiaodien/bí đỏ.png" width="100%"></div>
+<div><img src="/Fileanhchogiaodien/cau1.png" width="100%"></div>
+<div><img src="/Fileanhchogiaodien/cau6.png" width="100%"></div>
+<div align="center">
+    <video controls="controls" src="/Filemusic/thdu22 suameden.mp4" width="100%"></video>
+</div>
+<div align="center">
+    <video controls="controls" src="/Filemusic/video1.mp4" width="100%"></video>
+</div>
+<div><img src="/Fileanhnoidung/a69.png" width="100%"></div>
+<div><img src="/Fileanhnoidung/a70.png" width="100%"></div>
+<div><img src="/Fileanhnoidung/a71.png" width="100%"></div>
+<div><img src="/Fileanhnoidung/a72.png" width="100%"></div>
+
+
+<p><br></p>
+<p><br></p>
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+<div id="backtop1" class="vecuoitrang" >
+    <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+</div>
+<div id="backtop" class="vedautrang">
+    <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO NÚT BACK TO TOP-->
+<script>
+    function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function scrollToBottom() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO NÚT BACK TO TOP-->
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC HIGHLIGHT-->
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    loadHighlights();
+
+    document.addEventListener('mouseup', function(e) {
+        const selection = window.getSelection();
+        if (!selection.rangeCount || selection.isCollapsed) {
+            hidePopup();
+            return;
+        }
+
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        showPopup(rect.left + window.scrollX, rect.bottom + window.scrollY);
+    });
+
+    document.addEventListener('mousedown', function(e) {
+        const popup = document.getElementById('highlight-popup');
+        if (!popup.contains(e.target)) {
+            hidePopup();
+        }
+    });
+});
+
+function showPopup(x, y) {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.left = x + 'px';
+    popup.style.top = y + 'px';
+    popup.style.display = 'block';
+}
+
+function hidePopup() {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.display = 'none';
+}
+
+function highlightText(color) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    if (range.collapsed) return;
+
+    const span = document.createElement('span');
+    span.className = `highlight highlight-${color}`;
+    range.surroundContents(span);
+
+    saveHighlights();
+    hidePopup();
+}
+
+function removeHighlight() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    const parentElement = range.commonAncestorContainer.parentElement;
+
+    if (parentElement.classList.contains('highlight')) {
+        const parent = parentElement.parentNode;
+        while (parentElement.firstChild) {
+            parent.insertBefore(parentElement.firstChild, parentElement);
+        }
+        parent.removeChild(parentElement);
+    }
+
+    saveHighlights();
+    hidePopup();
+}
+
+// Hàm lưu các highlight vào local storage
+function saveHighlights() {
+    let highlights = document.querySelectorAll('.highlight-yellow, .highlight-green, .highlight-red');
+    let highlightData = [];
+
+    highlights.forEach((highlight) => {
+        highlightData.push({
+            text: highlight.textContent,
+            class: highlight.className
+        });
+    });
+
+    localStorage.setItem('highlights', JSON.stringify(highlightData));
+}
+// Hàm tải các highlight từ local storage
+function loadHighlights() {
+    let highlightData = JSON.parse(localStorage.getItem('highlights') || '[]');
+    let bodyHtml = document.body.innerHTML;
+
+    highlightData.forEach((highlight) => {
+        let tempDiv = document.createElement('div');
+        tempDiv.textContent = highlight.text;
+        let highlightHtml = `<span class="${highlight.class}">${tempDiv.innerHTML}</span>`;
+        bodyHtml = bodyHtml.replace(highlight.text, highlightHtml);
+    });
+    document.body.innerHTML = bodyHtml;
+}
+
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC HIGHLIGHT-->

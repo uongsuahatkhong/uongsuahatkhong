@@ -1,0 +1,120 @@
+audio{
+    height: 30px;
+    width: 300px;
+}
+audio::-webkit-media-controls-panel{
+   background-color: #487240;
+   width: 20px;
+}
+audio::-webkit-media-controls-play-button{
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 200px;
+}
+#boxaudio{
+    border: 3px solid rgb(255, 147, 147);
+    padding: 30px 30px;
+    border-radius: 20px;
+
+}
+#isaudio{
+   margin-top: 0px;
+}
+button{
+    font-size: 18px;
+    background-color: rgb(255, 145, 145);
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+#hopcauhoi{
+    border: 2px solid rgb(255, 109, 109);
+    background-color: rgb(228, 255, 109);
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.quiz-container {
+    width: 1005;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: rgb(109, 238, 255); 
+    margin-top: 20px;
+    border: 2px solid rgb(255, 109, 109);
+}
+.question {
+    margin-bottom: 15px;
+    background-color: rgb(230, 255, 138);
+    padding: 20px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 179, 179);
+    border: 1px solid #ccc;
+    padding: 15px;
+    z-index: 1000;
+    border-radius: 10px;
+}
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 246, 167, 0.548);
+    z-index: 500;
+    
+}
+.popup button {
+    margin-top: 10px;
+}
+#button1{
+    font-size: 18px;
+    background-color: rgb(145, 215, 255);
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+#button1:hover{
+    background-color: rgb(255, 134, 134);
+}
+#score{
+    border: 1px solid rgb(255, 115, 115);
+    background-color: rgb(255, 174, 171);
+    padding: 10px;
+    font-weight: bold; 
+    border-radius: 10px;
+}
+#userAnswer{
+    width:200px;
+    height: 40px;
+    border-radius: 10px;
+}
+.draggable {
+    padding: 10px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: move;
+    display: inline-block;
+}
+.draggable:hover{
+    background-color: #ff9898;
+}
+.dropzone {
+    padding: 20px;
+    margin-top: 15px;
+    border: 2px dashed #ff9292;
+    background-color: #e1fa53;
+    text-align: center;
+}

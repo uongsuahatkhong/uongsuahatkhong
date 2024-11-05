@@ -1,0 +1,133 @@
+footer{
+    position: fixed;
+    width: 100%;
+    background-color: #000000;
+    bottom: 0;
+    height: 8%;
+    left:0;
+    
+}
+body{
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.5;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+p{
+    text-indent: 40px;
+}
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9){
+    .back-video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    .back-video{
+        width: auto;
+        height: 100%;
+    }
+}
+#img1{
+    padding: 3% 3%;
+    float: right;
+}
+
+
+#nut1 i{
+    font-size: 45px;
+    }
+    #nut1{
+        border: none;
+        background: none;
+        color: #000000;
+        cursor: pointer;
+    }
+    .thanhphai{
+    position: fixed;
+    left: 90%;
+    bottom: 50%;
+    }
+
+
+
+    #nut2 i{
+        font-size:45px;
+    }
+    #nut2{
+        border: none;
+        background: none;
+        color: #000000;
+        cursor: pointer;
+    }
+    .thanhtrai{
+
+        position:fixed;
+        right:90%;
+        bottom:50%;
+    }
+
+
+
+
+    
+
+
+
+
+    #backtop i{
+        font-size:32px;
+        color:#000000;
+        cursor:pointer;
+    }
+    #backtop{
+        position: fixed;
+        left:91%;
+        bottom: 50px;
+    }
+    
+    #backtop1 i{
+        font-size:32px;
+        color:#000000;
+        cursor:pointer;
+    }
+    #backtop1{
+        position: fixed;
+        left:91%;
+        bottom: 95px;
+    }
+    
+    #chuthich{
+        text-align:center;
+        font-size:17px;
+        margin-top: 3px;
+        max-width: 600px;
+        margin: 0 auto;
+        text-indent: 0px;
+    }
+    body::-webkit-scrollbar {
+        width: 12px;               /* width of the entire scrollbar */
+      }
+      
+      body::-webkit-scrollbar-track {
+        background: rgb(255, 255, 255);        /* color of the tracking area */
+      }
+      
+      body::-webkit-scrollbar-thumb {
+        background-color: #000000;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+          /* creates padding around scroll thumb */
+      }

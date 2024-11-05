@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .quiz-container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .draggable {
+            padding: 10px;
+            margin: 5px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: move;
+            display: inline-block;
+        }
+        .dropzone {
+            padding: 20px;
+            margin-top: 15px;
+            border: 2px dashed #ccc;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 15px;
+            z-index: 1000;
+        }
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+        .popup button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h2>Drag the correct capital to the box:</h2>
+
+    <div class="question">
+        <p>Capital of France:</p>
+        <div id="paris" class="draggable" draggable="true" ondragstart="drag(event)">Paris</div>
+        <div id="berlin" class="draggable" draggable="true" ondragstart="drag(event)">Berlin</div>
+        <div id="madrid" class="draggable" draggable="true" ondragstart="drag(event)">Madrid</div>
+        <div id="rome" class="draggable" draggable="true" ondragstart="drag(event)">Rome</div>
+    </div>
+
+    <div id="dropzone" class="dropzone" ondragover="allowDrop(event)" ondrop="drop(event)">
+        Drop your answer here
+    </div>
+
+    <div id="score">Score: 0</div>
+</div>
+
+<!-- Popup Overlay -->
+<div class="popup-overlay" id="popupOverlay"></div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+    <p id="popupMessage"></p>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+    let score = 0;
+
+    function allowDrop(event) {
+        event.preventDefault();
+    }
+
+    function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+    }
+
+    function drop(event) {
+        event.preventDefault();
+        const data = event.dataTransfer.getData("text");
+        const droppedElement = document.getElementById(data);
+
+        // Correct answer is "paris"
+        if (data === "paris") {
+            score++;
+            document.getElementById('popupMessage').innerHTML = "Correct! Your score is now " + score + ".";
+        } else {
+            document.getElementById('popupMessage').innerHTML = "Incorrect. The correct answer is Paris.";
+        }
+
+        // Update the score display
+        document.getElementById('score').innerHTML = "Score: " + score;
+
+        // Show the popup
+        showPopup();
+
+        // Clear the dropzone after the drop
+        document.getElementById("dropzone").innerHTML = droppedElement.innerHTML;
+    }
+
+    function showPopup() {
+        document.getElementById('popupOverlay').style.display = 'block';
+        document.getElementById('popup').style.display = 'block';
+    }
+
+    function closePopup() {
+        document.getElementById('popupOverlay').style.display = 'none';
+        document.getElementById('popup').style.display = 'none';
+
+        // Reset the dropzone
+        document.getElementById("dropzone").innerHTML = "Drop your answer here";
+    }
+</script>
+
+</body>
+</html>
