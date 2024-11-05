@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương 1 Dẫn nhập</title>
+    <!--DƯỚI ĐÂY LÀ PHẦN STYLE CHUNG CHUNG-->
+<style type="text/css">
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 21px;
+        width: 960px;
+        margin: 0 auto;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    p{
+        text-indent: 40px;
+    }
+</style>
+<style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHUNG CHUNG-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO MỤC HIGHLIGHT-->
+<style>
+    .highlight-yellow { background-color: rgb(255, 255, 71); }
+    .highlight-red { background-color: rgb(132, 230, 255); }
+    .highlight-green { background-color: rgb(125, 255, 125); }
+    .highlight-popup {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1000;
+    }
+    .highlight-popup button {
+        margin-right: 10px;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO MỤC HIGHLIGHT-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO MỤC TRẢ LỜI CÂU TƯƠNG TÁC-->
+<style>
+    #textArea {
+        width: 100%;
+        height: 200px;
+    }
+    #saveButton, #clearButton {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO MỤC TRẢ LỜI CÂU TƯƠNG TÁC-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO CHÚ THÍCH-->
+<style type="text/css">
+    a:hover{
+            text-decoration: none;
+        }
+        a[data-tooltip]{
+            border-bottom: 1px dotted #333;
+            position:relative;
+        }
+        a[data-tooltip]::before{
+            content: attr(data-tooltip);
+            position:absolute;
+            background: #ffafaf;
+            font-size:14px;
+            color: black;
+            text-align: justify;
+            padding: 3px 9px;
+            border-radius: 6px;
+            width: 250px;
+            left: -800%;
+            right: -800%;
+            bottom: 100%;
+            display: none;
+        }
+    a[data-tooltip]:hover::before{
+        display: block;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO CHÚ THÍCH-->
+
+
+<link rel="stylesheet" href="cssnoidung.css">
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE ZOOM ẢNH-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
+    <style>
+        .my-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .my-gallery img {
+            /* width: 200px; */
+            height: auto;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE ZOOM ẢNH-->
+
+</head>
+
+<body id="text" >
+    <!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+    <div class="thanhphai">
+        <a target="_self" href="trangmau2.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+    <div class="thanhtrai">
+        <a target="_self" href="trangmau3.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+    <!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN PHẦN POP UP ĐỂ HIGHLIGHT-->
+    <div class="highlight-popup" id="highlight-popup">
+        <!-- <p align="center" id="takenote">Ghi chú</p> -->
+        <button onclick="highlightText('yellow')" id="notevang"><i class="bi bi-square-fill"></i></button>
+        <button onclick="highlightText('red')" id="notedo"><i class="bi bi-square-fill"></i></button>
+        <button onclick="highlightText('green')" id="notexanh"><i class="bi bi-square-fill"></i></button>
+        <button onclick="removeHighlight()" id="xoanote"><i class="bi bi-eraser-fill"></i></i></button>
+    </div>
+<!--TRÊN ĐÂY LÀ PHẦN PHẦN POP UP ĐỂ HIGHLIGHT-->
+
+
+
+<!--PHẦN BẮT ĐẦU NỘI DUNG CHÍNH-->
+
+    <div align="center" style="margin-top: 20px;"><img src="/bannerchuong1nhe.png"></div>
+    <h1 align="center">
+        Chương 1 <br/> Nghệ thuật hang động thời tiền sử và Sự sinh tồn 
+    </h1>
+    <p align="center" style="font-size: 30px;">(15.000 - 10.000 năm trước Công nguyên, hang Lascaux, Pháp)</p>
+    <h2>
+        1.Quần thể hang động Lascaux
+    </h2>
+    <p>
+        Đó là một vùng lãnh nguyên. Không một bóng cây<sup><a href="#" data-tooltip="Khi người Việt nói, chẳng hạn: “Con trâu là bạn của người nông dân”, “Tre già măng mọc”, thì “con trâu”, “tre” ở đây phải được hiểu theo nghĩa khái quát là “con trâu nói chung”, “tre nói chung”. Có lẽ GS. Lê Thành Khôi đã không để ý đến điều này nên mới chất vấn chúng tôi: “Văn hoá là sản phẩm của một cộng đồng chứ không phải của “con người”. “Con người” là ai? Có thể tách rời xã hội được không?” (xem: Lê Thành Khôi, “Đọc quyển “Tìm về bản sắc văn hoá Việt Nam” của Trần Ngọc Thêm, Tạp chí Diễn đàn, Paris, số tháng 2/2003).">[1]</a></sup>. Những dòng sông băng đã rút lên phía bắc châu Âu ngày nay, để lại vùng đất phía nam khắc nghiệt khó sống. Những tộc người du mục thời Đồ đá cũ sống ở các cửa hang và những nơi trú ẩn tạm thời. Họ dựa vào các con vật để lấy thịt, lông và công cụ... phục vụ cho sự tồn tại vật chất của mình. Dẫu vậy, những khi họ không săn bắt, dựng nơi trú ẩn, chế tác xương và da thú, hay đánh sậy, những khi họ không chỉ cố gắng để sinh tồn, người ta thấy họ ở sâu trong các hang động và SÁNG TẠO NGHỆ THUẬT.
+    </p>
+        
+
+<!--DƯỚI ĐÂY LÀ PHẦN ĐIỀN HÌNH ẢNH-->
+        <div class="my-gallery">
+            <figure align="center">
+                <a href="/a1.jpg" data-size="1000x700">
+                    <img src="/a1.jpg" alt="Image 1" width="700">
+                </a>
+            </figure>
+
+            <figure align="center">
+                <a href="/a1.jpg" data-size="1000x700">
+                    <img src="/a1.jpg" alt="Image 1" width="700">
+                </a>
+            </figure>
+            
+        </div>
+        <p id="chuthich" align="center">Hang bò tót (Hall of Bulls), 15.000 năm đến 10.000 năm trước Công nguyên, hang Lascaux, Pháp</p>
+<!--TRÊN ĐÂY LÀ PHẦN ĐIỀN HÌNH ẢNH-->
+
+        <p>
+            Quần thể hang Lascaux là một phức hợp các đường dường hầm dài hơn 246m. Trên những bức tường đá vôi trắng là những hình vẽ về theo phong cách tượng trưng, chủ yếu là các loài tuần lộc, ibex (sơn dương), ngựa, và bò tót. Bởi người tiền sử chưa có chữ viết, chúng ta gần như không thể thế hiểu hết mục đích và ý nghĩa thực sự của loại hình nghệ thuật cổ xưa này. Nhưng khi xem xét điều kiện khó khăn lúc bấy giờ, chúng ta có thể đặt giả thuyết rằng những bức vẽ trong
+            hang này đặc biệt quan trọng với những con người thời đó.
+        </p>
+
+        <div class="my-gallery">
+            <figure align="center">
+                <a href="/a1.jpg" data-size="1000x700">
+                    <img src="/a1.jpg" alt="Image 1" width="700">
+                </a>
+            </figure>
+
+            <figure align="center">
+                <a href="/a1.jpg" data-size="1000x700">
+                    <img src="/a1.jpg" alt="Image 1" width="700">
+                </a>
+            </figure>
+            
+        </div>
+        <p id="chuthich" align="center">Hang bòvửhbebgwrh00 năm đến 10.000 năm trước Công nguyên, hang Lascaux, Pháp</p>
+
+        <p>
+            Khi thời điểm đến sẽ có lúc chúng ta phải đối mặt với nó
+        </p>
+
+
+    
+<!--DƯỚI ĐÂY LÀ PHẦN ĐIỀN CÂU HỎI TƯƠNG TÁC-->
+
+<div>
+    <p align="center" style="margin-top: 0px; margin-bottom: 10px;; font-size: 30px; font-weight: bold;">&#128366;</p>
+    <p align="center" style="margin-top: 0px;"><img src="/Fileanhchogiaodien/linbreak.png" width="280px"></p>
+</div>
+<p>
+    <b>Câu 1: Bạn tìm kiếm sự chấp thuận từ đâu? Sự chấp thuận của ai là quan trọng nhất với bạn? Và tìm kiếm sự chấp thuận của ai là khó nhất? Tại sao lại như vậy?</b>
+</p>
+
+<textarea id="writingArea1" class="writing-area" placeholder="Nhập câu trả lời của bạn ở đây"></textarea>
+<button class="save-button" onclick="saveData('writingArea1')">Lưu</button>
+
+<!--TRÊN ĐÂY LÀ PHẦN ĐIỀN CÂU HỎI TƯƠNG TÁC-->
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN ĐIỀN CÂU HỎI TƯƠNG TÁC-->
+
+<p>
+    <b>Câu 2:Vì sao bạn yêu nghệ thuật?</b>
+</p>
+
+<textarea id="writingArea2" class="writing-area" placeholder="Nhập câu trả lời của bạn ở đây"></textarea>
+<button class="save-button" onclick="saveData('writingArea2')">Lưu</button>
+
+<!--TRÊN ĐÂY LÀ PHẦN ĐIỀN CÂU HỎI TƯƠNG TÁC-->
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+    <div id="backtop1" class="vecuoitrang" >
+        <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+    </div>
+    <div id="backtop" class="vedautrang">
+        <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+    </div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+
+
+
+
+<!-- DƯỚI ĐÂY LÀ CẤU TRÚC CẦN CÓ CHO PHẦN ZOOM ẢNH -->
+
+    <!-- PhotoSwipe core JS files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+    <!-- PhotoSwipe template -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- TRÊN ĐÂY LÀ CẤU TRÚC CẦN CÓ CHO PHẦN ZOOM ẢNH -->
+
+
+
+</body>
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO NÚT BACK TO TOP-->
+<script>
+    function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function scrollToBottom() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO NÚT BACK TO TOP-->
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC HIGHLIGHT-->
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    loadHighlights();
+
+    document.addEventListener('mouseup', function(e) {
+        const selection = window.getSelection();
+        if (!selection.rangeCount || selection.isCollapsed) {
+            hidePopup();
+            return;
+        }
+
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        showPopup(rect.left + window.scrollX, rect.bottom + window.scrollY);
+    });
+
+    document.addEventListener('mousedown', function(e) {
+        const popup = document.getElementById('highlight-popup');
+        if (!popup.contains(e.target)) {
+            hidePopup();
+        }
+    });
+});
+
+function showPopup(x, y) {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.left = x + 'px';
+    popup.style.top = y + 'px';
+    popup.style.display = 'block';
+}
+
+function hidePopup() {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.display = 'none';
+}
+
+function highlightText(color) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    if (range.collapsed) return;
+
+    const span = document.createElement('span');
+    span.className = `highlight highlight-${color}`;
+    range.surroundContents(span);
+
+    saveHighlights();
+    hidePopup();
+}
+
+function removeHighlight() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    const parentElement = range.commonAncestorContainer.parentElement;
+
+    if (parentElement.classList.contains('highlight')) {
+        const parent = parentElement.parentNode;
+        while (parentElement.firstChild) {
+            parent.insertBefore(parentElement.firstChild, parentElement);
+        }
+        parent.removeChild(parentElement);
+    }
+
+    saveHighlights();
+    hidePopup();
+}
+
+// Hàm lưu các highlight vào local storage
+function saveHighlights() {
+    let highlights = document.querySelectorAll('.highlight-yellow, .highlight-green, .highlight-red');
+    let highlightData = [];
+
+    highlights.forEach((highlight) => {
+        highlightData.push({
+            text: highlight.textContent,
+            class: highlight.className
+        });
+    });
+
+    localStorage.setItem('highlights', JSON.stringify(highlightData));
+}
+// Hàm tải các highlight từ local storage
+function loadHighlights() {
+    let highlightData = JSON.parse(localStorage.getItem('highlights') || '[]');
+    let bodyHtml = document.body.innerHTML;
+
+    highlightData.forEach((highlight) => {
+        let tempDiv = document.createElement('div');
+        tempDiv.textContent = highlight.text;
+        let highlightHtml = `<span class="${highlight.class}">${tempDiv.innerHTML}</span>`;
+        bodyHtml = bodyHtml.replace(highlight.text, highlightHtml);
+    });
+    document.body.innerHTML = bodyHtml;
+}
+
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC HIGHLIGHT-->
+
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC CỦA CÂU HỎI TƯƠNG TÁC-->
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const textArea = document.getElementById('textArea');
+    const saveButton = document.getElementById('saveButton');
+    const clearButton = document.getElementById('clearButton');
+
+    // Load the saved text from Local Storage when the page loads
+    const savedText = localStorage.getItem('textAreaContent');
+    if (savedText) {
+        textArea.value = savedText;
+    }
+
+    // Save the text to Local Storage when the "Save" button is clicked
+    saveButton.addEventListener('click', function() {
+        localStorage.setItem('textAreaContent', textArea.value);
+        alert('Bạn muốn lưu ghi chép của mình?');
+    });
+
+    // Clear the text from Local Storage and the text area when the "Clear" button is clicked
+    clearButton.addEventListener('click', function() {
+        localStorage.removeItem('textAreaContent');
+        textArea.value = '';
+        alert('Bạn muốn xóa ghi chép?');
+    });
+});
+
+</script> -->
+<script>
+    // Function to save data to local storage
+    function saveData(id) {
+        const data = document.getElementById(id).value;
+        localStorage.setItem(id, data);
+        alert('Câu trả lời của bạn đã được lưu!');
+    }
+
+    // Function to load data from local storage
+    function loadData() {
+        const writingAreas = document.querySelectorAll('.writing-area');
+        writingAreas.forEach(area => {
+            const savedData = localStorage.getItem(area.id);
+            if (savedData) {
+                area.value = savedData;
+            }
+        });
+    }
+
+    // Load data when the page loads
+    window.onload = loadData;
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC CỦA CÂU HỎI TƯƠNG TÁC-->
+
+
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC ZOOM ẢNH-->
+<script>
+    // Initialize PhotoSwipe
+    document.addEventListener('DOMContentLoaded', function() {
+        var initPhotoSwipeFromDOM = function(gallerySelector) {
+            var parseThumbnailElements = function(el) {
+                var thumbElements = el.childNodes,
+                    numNodes = thumbElements.length,
+                    items = [],
+                    figureEl,
+                    linkEl,
+                    size,
+                    item;
+
+                for (var i = 0; i < numNodes; i++) {
+                    figureEl = thumbElements[i];
+
+                    if (figureEl.nodeType !== 1) {
+                        continue;
+                    }
+
+                    linkEl = figureEl.children[0];
+                    size = linkEl.getAttribute('data-size').split('x');
+
+                    item = {
+                        src: linkEl.getAttribute('href'),
+                        w: parseInt(size[0], 10),
+                        h: parseInt(size[1], 10)
+                    };
+
+                    if (figureEl.children.length > 1) {
+                        item.title = figureEl.children[1].innerHTML;
+                    }
+
+                    if (linkEl.children.length > 0) {
+                        item.msrc = linkEl.children[0].getAttribute('src');
+                    }
+
+                    item.el = figureEl;
+                    items.push(item);
+                }
+
+                return items;
+            };
+
+            var closest = function closest(el, fn) {
+                return el && (fn(el) ? el : closest(el.parentNode, fn));
+            };
+
+            var onThumbnailsClick = function(e) {
+                e = e || window.event;
+                e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                var eTarget = e.target || e.srcElement;
+
+                var clickedListItem = closest(eTarget, function(el) {
+                    return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                });
+
+                if (!clickedListItem) {
+                    return;
+                }
+
+                var clickedGallery = clickedListItem.parentNode,
+                    childNodes = clickedListItem.parentNode.childNodes,
+                    numChildNodes = childNodes.length,
+                    nodeIndex = 0,
+                    index;
+
+                for (var i = 0; i < numChildNodes; i++) {
+                    if (childNodes[i].nodeType !== 1) {
+                        continue;
+                    }
+
+                    if (childNodes[i] === clickedListItem) {
+                        index = nodeIndex;
+                        break;
+                    }
+                    nodeIndex++;
+                }
+
+                if (index >= 0) {
+                    openPhotoSwipe(index, clickedGallery);
+                }
+                return false;
+            };
+
+            var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                var pswpElement = document.querySelectorAll('.pswp')[0],
+                    gallery,
+                    options,
+                    items;
+
+                items = parseThumbnailElements(galleryElement);
+
+                options = {
+                    galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+                    getThumbBoundsFn: function(index) {
+                        var thumbnail = items[index].el.getElementsByTagName('img')[0],
+                            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                            rect = thumbnail.getBoundingClientRect();
+
+                        return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+                    }
+                };
+
+                if (fromURL) {
+                    if (options.galleryPIDs) {
+                        for (var j = 0; j < items.length; j++) {
+                            if (items[j].pid == index) {
+                                options.index = j;
+                                break;
+                            }
+                        }
+                    } else {
+                        options.index = parseInt(index, 10) - 1;
+                    }
+                } else {
+                    options.index = parseInt(index, 10);
+                }
+
+                if (isNaN(options.index)) {
+                    return;
+                }
+
+                if (disableAnimation) {
+                    options.showAnimationDuration = 0;
+                }
+
+                gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                gallery.init();
+            };
+
+            var galleryElements = document.querySelectorAll(gallerySelector);
+
+            for (var i = 0, l = galleryElements.length; i < l; i++) {
+                galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                galleryElements[i].onclick = onThumbnailsClick;
+            }
+        };
+
+        initPhotoSwipeFromDOM('.my-gallery');
+    });
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC ZOOM ẢNH-->
+
+
+
+</html>

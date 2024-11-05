@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương 1 phần 1</title>
+    <style type="text/css">
+        body{
+            font-family: Arial, sans-serif;
+            font-size: 23px;
+            width: 960px;
+            margin: 0 auto;
+            text-align: justify;
+            line-height: 1.5;
+        }
+        table th, td{
+            border-collapse: collapse;
+            border: 1.5px solid;
+        }
+        p{
+        text-indent: 40px;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        a[data-tooltip]{
+            border-bottom: 1px dotted #333;
+            position:relative;
+        }
+        a[data-tooltip]::before{
+            content: attr(data-tooltip);
+            position:absolute;
+            background: #ffafaf;
+            font-size:14px;
+            color: black;
+            text-align: justify;
+            padding: 3px 9px;
+            border-radius: 6px;
+            width: 250px;
+            left: -800%;
+            right: -800%;
+            bottom: 100%;
+            display: none;
+        }
+    a[data-tooltip]:hover::before{
+        display: block;
+    }
+    </style>
+
+<style>
+    .highlight-yellow { background-color: yellow; }
+    .highlight-red { background-color: rgb(255, 184, 184); }
+    .highlight-green { background-color: rgb(194, 255, 194); }
+    .highlight-popup {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1000;
+    }
+    .highlight-popup button {
+        margin-right: 10px;
+    }
+</style>
+
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    </style>
+    <link rel="stylesheet" href="cssnoidung.css">
+</head>
+<body id="text">
+    <div class="thanhphai">
+        <a target="_self" href="trangmauchuan.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+    <div class="thanhtrai">
+        <a target="_self" href="trangmau3.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+    <h2 align="center">
+        1. Văn hóa và văn hóa học
+    </h2>
+    <h3>
+        1.1. Định nghĩa văn hóa
+    </h3>
+    <p id="text-content">
+        Trong quá trình hình thành, con người đã sáng tạo ra văn hoá; văn hoá cùng với lao động chính là hai yếu tố mang tính quyết định trong việc biến con vượn thành người. Khoa học nghiên cứu về văn hoá gọi là văn hoá học (culturology) hoặc nghiên cứu văn hoá (cultural studies).
+    </p>
+    <p>
+        Từ “văn hoá” có rất nhiều nghĩa. Trong tiếng Việt, văn hoá được dùng theo nghĩa thông dụng để chỉ học thức <i>(trình độ văn hoá)</i>, lối sống <i>(nếp sống văn hoá)</i>; theo nghĩa chuyên biệt để chỉ trình độ phát triển của một giai đoạn <i>(văn hoá Đông Sơn)</i>... Trong khi theo nghĩa rộng thì văn hoá bao gồm tất cả, từ các sản phẩm vật chất như đồ ăn, đồ mặc, vật dụng cho đến những giá trị tinh thần như tri thức, kinh nghiệm, tín ngưỡng, phong tục, lối sống, tính cách... Chính với cách hiểu rộng này, văn hoá mới là đối tượng đích thực của văn hoá học.
+    </p>
+    <div class="highlight-popup" id="highlight-popup">
+        <button onclick="highlightText('yellow')">Yellow</button>
+        <button onclick="highlightText('red')">Red</button>
+        <button onclick="highlightText('green')">Green</button>
+        <button onclick="removeHighlight()">Remove</button>
+    </div>
+    
+    <p>
+       <span style="font-size: 20.5px;"> Tuy nhiên, ngay cả với cách hiểu rộng này trên thế giới cũng có hàng trăm định nghĩa khác nhau. Để định nghĩa một khái niệm, trước hết cần xác định được những đặc trưng cơ bản của nó giúp cho việc nhận diện khái niệm được nhanh chóng, dễ dàng. Đó là những nét riêng biệt và tiêu biểu, cần và đủ để phân biệt khái niệm (sự vật) ấy với khái niệm (sự vật) khác.</span> Việc phân tích các cách tiếp cận văn hoá phổ biến hiện nay (coi văn hoá như tập hợp, như hệ thống, như giá trị, như hoạt động, như kí hiệu, như thuộc tính nhân cách, như thuộc tính xã hội...), giúp ta có thể điều chỉnh và xây dựng được một định nghĩa về văn hoá trên cơ sở xác định bốn đặc trưng cơ bản của văn hoá như sau:
+    </p>
+    <p>
+        <b>Văn hoá là một hệ thống hữu cơ các giá trị vật chất và tinh thần do con người sáng tạo và tích luỹ qua quá trình hoạt động thực tiễn, trong sự tương tác giữa con người với môi trường tự nhiên và xã hội.</b>
+    </p>
+    <div id="backtop">
+        <i class="bi bi-arrow-up-square-fill"></i>
+    </div>
+</body id="text">
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function(){
+        $(window).scroll(function(){
+            if($(this).scrollTop()){
+                $('#backtop').fadeIn();
+            }else{
+                $('#backtop').fadeOut();
+            }
+        });
+    });
+    $("#backtop").click(function(){
+        $('html, body').animate({scrollTop: 0}, 400)
+    });
+</script>
+    <p>
+        Dưới đây, chúng ta đi vào xem xét từng đặc trưng của văn hoá được nói đến trong định nghĩa cùng các chức năng của nó.
+    </p>
+    <h3>
+        1.2. Các đặc trưng và chức năng của văn hóa
+    </h3>
+        <p><span style="font-weight: bold;">1.2.1.</span> Văn hoá trước hết phải có tính hệ thống. Trước chúng tôi, văn hoá thường được định nghĩa <i>“là tất cả...”</i>, <i>“là toàn bộ...”</i>, <i>“là phức thể...”</i>,<i> “là tập hợp...”</i> (xem chẳng hạn: E.B. Tylor, B.Malinowski, M. Mead, UNESCO...).  Đặc trưng tính hệ thống giúp <i>phân biệt văn hoá với tập hợp</i> các biểu hiện riêng lẻ, các bộ phận cấu thành của văn hoá; nó giúp phát hiện những mối liên hệ mật thiết giữa các hiện tượng, sự kiện thuộc một nền văn hoá; phát hiện các đặc trưng, những quy luật hình thành và phát triển của văn hoá.</p>
+    <p>
+        Nhờ có tính hệ thống mà văn hoá, với tư cách là một thực thể bao trùm mọi hoạt động của xã hội, thực hiện được <b>chức năng tổ chức xã hội</b>. Chính văn hoá làm tăng độ ổn định của xã hội, cung cấp cho xã hội mọi phương tiện cần thiết để ứng phó với môi trường tự nhiên và xã hội của mình. Nó là <i>nền tảng</i> của xã hội - có lẽ chính vì vậy mà người Việt dung loại từ “nền” để xác định khái niệm văn hoá (<i>nền văn hoá</i>).
+    </p>
+    <p>
+        <span style="font-weight: bold;">1.2.2.</span> Đặc trưng quan trọng thứ hai của văn hoá là tính giá trị. Văn hoá theo nghĩa đen nghĩa là “trở thành đẹp, thành có giá trị”. Tính giá trị cần để phân biệt giá trị với phi giá trị (VD: thiên tai, trộm cướp). Nó là thước đo mức độ nhân bản của xã hội và con người.
+    </p>
+    <p>
+        Các giá trị văn hoá, theo mục đích có thể chia thành giá trị <i>vật chất</i> (phục vụ cho nhu cầu vật chất) và giá trị <i>tinh thần</i> (phục vụ cho nhu cầu tinh thần). Theo hình thái tồn tại có thể chia thành giá trị <i>vật thể</i> (tồn tại trong không gian) và <i>phi vật thể</i>. Theo ý nghĩa có thể chia thành giá trị <i>sử dụng</i>, giá trị <i>đạo đức</i> và giá trị <i>thẩm mỹ</i>. Theo thời gian có thể phân biệt các giá trị <i>vĩnh cửu</i> và giá trị <i>nhất thời</i>. Sự phân biệt các giá trị theo thời gian cho phép ta có được cái nhìn biện chứng và khách quan trong việc đánh giá tính giá trị của sự vật, hiện tượng; tránh được những xu hướng cực đoan - phủ nhận sạch trơn hoặc tán dương hết lời.
+    </p>
+    <p>
+        Nhờ thường xuyên xem xét các giá trị mà văn hoá thực hiện được chức năng quan trọng thứ hai là <b><i>chức năng điều chỉnh xã hội</i></b>, giúp cho xã hội duy trì được trạng thái cân bằng động, không ngừng tự hoàn thiện và thích ứng với những biến đổi của môi trường tự nhiên và xã hội, giúp <i>định hướng các chuẩn mực</i>, làm <i>động lực cho sự phát triển của xã hội</i>.
+    </p>
+    <p>
+        <span style="font-weight: bold;">1.2.3.</span> Đặc trưng thứ ba của văn hoá là tính nhân sinh (nhân tạo). Tính nhân sinh cho phép phân biệt văn hoá như một <i>hiện tượng xã hội</i> (do con người sáng tạo = nhân tạo) với các <i>giá trị tự nhiên</i> (thiên tạo). Phần lớn các giá trị văn hoá chính là cái tự nhiên được biến đổi bởi con người. Sự tác động của con người vào tự nhiên có thể mang tính vật chất (như việc luyện quặng, đẽo gỗ...) hoặc mang tính tinh thần (như việc đặt tên, sáng tạo truyền thuyết để giải thích hình dáng, tên gọi của vạn vật...). 
+    </p>
+    <p>
+        Do mang tính nhân sinh, văn hoá trở thành sợi dây nối liền con người với con người, văn hoá thực hiện <b><i>chức năng giao tiếp</i></b> và có tác dụng liên kết mọi người lại với nhau. Nếu ngôn ngữ là hình thức của giao tiếp thì văn hoá là nội dung của hoạt động này.
+    </p>
+    <p>
+        <span style="font-weight: bold;">1.2.4.</span> Văn hoá còn có tính lịch sử. Tính lịch sử cho phép phân biệt văn hoá như sản phẩm của một quá trình và được tích luỹ qua nhiều thế hệ với văn minh như sản phẩm cuối cùng, chỉ ra trình độ phát triển của từng giai đoạn. Tính lịch sử tạo cho văn hoá một bề dày, một chiều sâu; nó buộc văn hoá thường xuyên tự điều chỉnh, tiến hành phân loại và phân bố lại các giá trị. 
+    </p>
+    <p>
+        Tính lịch sử được duy trì bằng truyền thống văn hoá. <b><i>Truyền thống văn hoá</i></b> là một tiểu hệ lớn của văn hoá, bao gồm những giá trị tương đối ổn định, những kinh nghiệm tập thể được tích lũy và tái tạo trong cộng đồng người qua không gian và thời gian, được đúc kết thành những khuôn mẫu xã hội và cố định hóa dưới dạng ngôn ngữ, phong tục, tập quán, nghi lễ, luật pháp, dư luận...
+    </p>
+    <p>
+        Truyền thống văn hoá tồn tại nhờ giáo dục. <b><i>Chức năng giáo dục</i></b> là chức năng quan trọng thứ tư của văn hoá. Nhưng văn hoá thực hiện chức năng giáo dục không chỉ bằng những giá trị đã ổn định (truyền thống), mà còn bằng cả những giá trị đang hình thành. Hai loại giá trị này tạo thành một hệ thống chuẩn mực mà con người hướng tới. Nhờ nó mà văn hoá đóng vai trò quyết định trong việc hình thành nhân cách. Từ chức năng giáo dục, văn hoá có chức năng phái sinh là <i>đảm bảo tính kế tục của lịch sử</i>: Văn hoá là một thứ “gien” xã hội di truyền phẩm chất con người lại cho các thế hệ mai sau.
+    </p>
+    <p>
+        Bốn đặc trưng vừa nêu là cần và đủ để tạo thành một bộ chìa khoá giúp ta nhận diện một sự vật/hiện tượng/khái niệm có thuộc về văn hoá hay không, để định nghĩa khái niệm “văn hoá” (xem Hình 1).
+    </p>
+    <p align="center" style="text-indent: 0px;"><img src="/fileanhhtml/a1.png" width="650px"></p>
+    <div id="chuthich">
+        Hình 1: Nhận diện khái niệm văn hóa
+    </div>
+    <p>
+        <span style="font-weight: bold;">1.2.5.</span> Ngoài ra, trong định nghĩa văn hóa nêu trên còn ẩn tàng một bộ chìa khóa thứ hai giúp ta định vị văn hoá. Cái khung để định vị văn hoá là một hệ tọa độ bao gồm ba thông số là Chủ thể - Không gian - Thời gian. Định nghĩa nêu chủ thể của văn hoá là <i>con người</i>. Khái niệm “con người” có thể hiểu theo nghĩa khái quát hoặc nghĩa cụ thể<sup><a href="#" data-tooltip="Khi người Việt nói, chẳng hạn: “Con trâu là bạn của người nông dân”, “Tre già măng mọc”, thì “con trâu”, “tre” ở đây phải được hiểu theo nghĩa khái quát là “con trâu nói chung”, “tre nói chung”. Có lẽ GS. Lê Thành Khôi đã không để ý đến điều này nên mới chất vấn chúng tôi: “Văn hoá là sản phẩm của một cộng đồng chứ không phải của “con người”. “Con người” là ai? Có thể tách rời xã hội được không?” (xem: Lê Thành Khôi, “Đọc quyển “Tìm về bản sắc văn hoá Việt Nam” của Trần Ngọc Thêm, Tạp chí Diễn đàn, Paris, số tháng 2/2003).">[1]</a></sup>. Chỉ có <i>con người khái quát</i> mới là chủ thể sáng tạo ra văn hoá; còn con người cụ thể là sản phẩm của văn hoá, vật mang văn hoá; họ chỉ có thể tham gia vào việc sáng tạo văn hoá mà thôi. Văn hoá luôn phải tồn tại trong một không gian cụ thể (trong định nghĩa thể hiện bằng cụm từ “<i>môi trường tự nhiên và xã hội”</i>) và một thời gian cụ thể (trong định nghĩa thể hiện bằng cụm từ “<i>quá trình hoạt động”</i>). 
+    </p>
+    <h3>
+        1.3. Văn hoá với Văn minh, Văn hiến, Văn vật
+    </h3>
+    <p>
+    <span style="font-weight: bold;">1.3.1.</span> Lâu nay, không ít người vẫn sử dụng <i>văn minh</i> (civilization) như một từ đồng nghĩa với văn hoá. Song thực ra, <i>văn minh</i> và <i>văn hoá</i> là hai khái niệm rất khác nhau. Trong các từ điển, từ “văn minh” có thể được định nghĩa theo nhiều cách, song chúng thường có một nét nghĩa chung là “trình độ phát triển”. Trong khi <i>văn hoá</i> luôn có bề dày của quá khứ (tính lịch sử) thì <i>văn minh</i> là một lát cắt đồng đại, nó cho biết <i>trình độ phát triển của văn hoá</i> ở từng giai đoạn. 
+    </p>
+    <p>
+        Nói đến <i>văn minh</i>, người ta còn nghĩ đến các tiện nghi. Như vậy, văn hoá và văn minh còn khác nhau ở tính giá trị: Trong khi văn hoá chứa cả các giá trị <i>vật chất</i> lẫn <i>tinh thần</i>, thì văn minh chủ yếu thiên về các giá trị <i>vật chất</i> mà thôi. Sự khác biệt của <i>văn hoá</i> và <i>văn minh</i> về giá trị tinh thần và tính lịch sử dẫn đến sự khác biệt về phạm vi. Văn hoá mang <i>tính dân tộc</i>, còn văn minh thì có <i>tính quốc tế</i>, nó đặc trưng cho một khu vực rộng lớn hoặc cả nhân loại, bởi lẽ cái vật chất thì dễ phổ biến, lây lan.
+    </p>
+    <p>
+        Sự khác biệt thứ tư là về nguồn gốc: Văn hoá gắn bó nhiều hơn với <i>phương Đông nông nghiệp</i>, <i>nông thôn</i> ( xem I - §2.1.1); còn văn minh gắn bó nhiều hơn với <i>phương Tây đô thị</i>, <i>công nghiệp</i> và <i>thương mại</i>. Ở các ngôn ngữ phương Tây, từ “văn hoá” (cultura) bắt nguồn từ chữ <i>cultus</i> tiếng La - tinh có nghĩa là “trồng trọt”; còn từ “văn minh” (civilization) thì liên quan với <i>civitas</i> tiếng La - tinh có nghĩa là “đô thị, thành phố”.
+    </p>
+    <p>
+        <span style="font-weight: bold;"> 1.3.2.</span> Ngoài văn hoá và văn minh, tiếng Việt còn có các khái niệm <i>văn hiến</i> và <i>văn vật</i>. Các từ điển thường định nghĩa <i>văn hiến</i> là “truyền thống văn hoá lâu đời”, còn <i>văn vật</i> là “truyền thống văn hoá hiểu hiện ở nhiều nhân tài và di tích lịch sử”. Theo đó, <i>văn hiến</i> và <i>văn vật</i> chỉ là những khái niệm bộ phận của “văn hoá”, chúng khác văn hoá ở độ bao quát các giá trị: <i>Văn hiến</i> là văn hoá thiên về “truyền thống lâu đời”, mà truyền thống lâu đời còn lưu giữ được chính là các <i>giá trị tinh thần</i>; còn <i>văn vật</i> là văn hoá thiên về các <i>giá trị vật chất</i> (nhân tài, di tích, hiện vật). Chính vì vậy mà ông cha ta thường nói “<i>đất nước 4000 năm văn hiến</i>”, nhưng lại nói “<i>Hà Nội - Thăng Long ngàn năm văn vật</i>”. Phương Tây không có các khái niệm văn hiến, văn vật, cho nên hai từ này không thể dịch ra các ngôn ngữ phương Tây được. 
+    </p>
+    <p>
+        Sự phân biệt bốn khái niệm văn hoá, văn minh, văn hiến, văn vật được trình bày trong Bảng 1.
+    </p>
+    <table border="1" align="center" cellpadding="30" cellspacing="20" width="800" height="150" style="border-collapse: collapse;">
+        <tr style="text-align: center; background-color: beige;">
+            <th>VĂN VẬT</th>
+            <th>VĂN HIẾN</th>
+            <th>VĂN HÓA</th>
+            <th>VĂN MINH</th>
+        </tr>
+        <tr>
+            <td>Thiên về giá trị vật chất</td>
+            <td>Thiên về giá trị tinh thần</td>
+            <td>Chứa cả giá trị vật chất lẫn tinh thần</td>
+            <td>Thiên về giá trị vật chất - kĩ thuật</td>
+        </tr>
+        <tr>
+            <td colspan="3">Có bề dày lịch sử</td>
+            <td>Chỉ trình độ phát triển</td>
+        </tr>
+        <tr>
+            <td colspan="3">Có tính dân tộc</td>
+            <td>Có tính quốc tế</td>
+        </tr>
+        <tr>
+            <td colspan="3">Gắn bó nhiều hơn với phương Đông nông nghiệp</td>
+            <td>Gắn bó nhiều hơn với phương Tây đô thị</td>
+        </tr>
+    </table>
+    <div id="chuthich">
+        Bảng 1: So sánh văn hóa, văn minh, văn hiến, văn vật
+    </div>
+    <h3>
+        1.4. Cấu trúc của hệ thống văn hóa
+    </h3>
+    <p>
+        <span style="font-size: 20.5px;">Theo số lượng thành tố, vă hoá có thể được chia đôi thành văn hoá vật chất và văn hoá tinh thần, văn hoá vật thể và văn hoá phi vật thể. Bên cạnh đó là những cách chia ba (tam phân) như:  văn hoá vật chất - văn hoá xã hội - văn hoá tinh thần; văn hoá vật chất - văn hoá tinh thần - văn hoá nghệ thuật; sinh hoạt kinh tế - sinh hoạt xã hội - sinh hoạt trí thức... Một số tác giả khác nói đến bốn thành tố (tứ phân) như văn hoá sản xuất - văn hoá xã hội - văn hoá tư tưởng - văn hoá nghệ thuật, hoặc hoạt động sinh tồn - hoạt động xã hội - hoạt động tinh thần - hoạt động nghệ thuật...</span>
+    </p>
+    <p>
+        Theo dạng hoạt động, chúng tôi phân chia văn hoá thành một hệ thống bao gồm ba thành tố là văn hoá <i>nhận thức</i>, văn hoá <i>tổ chức</i> và văn hoá <i>ứng xử</i>. Xét theo đối tượng, mỗi một trong ba thành tố này có thể tiếp tục được chia nhỏ thành hai tiểu hệ. Kết quả thu được bức tranh tổng thể cấu trúc của hệ thống văn hoá phân loại theo dạng hoạt động như sau:
+    </p>
+    <p>
+        <b><i>Văn hoá nhận thức</i></b> là thành tố gồm các giá trị tích lũy được trong lĩnh vực hoạt động nhận thức. Trong quá trình tồn tại và phát triển, mỗi cộng đồng người (chủ thể văn hoá) sẽ tích lũy được một kho tàng những tri thức và kinh nghiệm phong phú về vũ trụ và về con người. Do vậy, xét theo đối tượng thì văn hoá nhận thức sẽ có hai tiểu hệ là <i>văn hoá nhận thức về vũ trụ</i> và <i>văn hoá nhận thức về con người</i>.
+    </p>
+    <p>
+        <b><i>Văn hoá tổ chức</i></b> là thành tố gồm các giá trị tích lũy được trong lĩnh vực hoạt động tổ chức. Cần chú ý rằng “văn hoá tổ chức” nói đến ở đây (trong quan hệ bộ ba “nhận thức - tổ chức - ứng xử”) là văn hoá của <i>hoạt động tổ chức</i>, chứ không phải là văn hoá của một tổ chức (dịch sang tiếng Anh sẽ phải là “organizing culture” chứ không phải là “organizational culture”). Xét theo đối tượng, văn hoá tổ chức có hai tiểu hệ là văn hoá <i>tổ chức đời sống tập thể</i> (ở tầm vĩ mô như tổ chức nông thôn, quốc gia, đô thị), và văn hoá <i>tổ chức đời sống cá nhân</i> (liên quan đến tổ chức đời sống riêng của mỗi cá nhân như tín ngưỡng, phong tục, giao tiếp, nghệ thuật...).
+    </p>
+    <p>
+        <b><i>Văn hoá ứng xử</i></b> là thành tố gồm các giá trị tích lũy được trong lĩnh vực hoạt động ứng xử. Cộng đồng chủ thể văn hoá tồn tại trong quan hệ với hai loại môi trường là môi trường tự nhiên (thiên nhiên, khí hậu... nơi cộng đồng chủ thể cư trú) và môi trường xã hội (các dân tộc, quốc gia láng giềng bao quanh cộng đồng chủ thể văn hoá). Như vậy, văn hoá ứng xử xét theo đối tượng có hai tiểu hệ là <i>văn hoá ứng xử với môi trường tự nhiên</i> và <i>văn hoá ứng xử với môi trường xã hội</i>. Tiếp tục chia nhỏ nữa, với mỗi loại môi trường, đều có thể có hai cách xử thế phù hợp với hai loại tác động của chúng là văn hoá <i>tận dụng môi trường</i> (tác động tích cực) và văn hoá <i>ứng phó với môi trường</i> (tác động tiêu cực).
+    </p>
+    <table border="1" align="center" cellpadding="15" cellspacing="15" width="800" height="100" style="border-collapse: collapse;">
+        <tr align="center">
+            <th colspan="2">Theo hoạt động</th>
+            <th>Theo đối tượng của hoạt động</th>
+        </tr>
+        <tr>
+            <td rowspan="6" align="center" style="font-weight: bold; background-color: beige;">VĂN HÓA</td>
+            <td rowspan="2">I - Văn hoá nhận thức</td>
+            <td>Nhận thức về vũ trụ</td>
+        </tr>
+        <tr>
+            <td>Nhận thức về con người</td>
+        </tr>
+        <tr>
+            <td rowspan="2">I - Văn hoá tổ chức</td>
+            <td>Tổ chức đời sống tập thể</td>
+        </tr>   
+        <tr> 
+            <td>Tổ chức đời sống cá nhân</td>
+        </tr>
+        <tr>
+            <td rowspan="2">III - Văn hoá ứng xử với môi trường</td>
+            <td>Ứng xử với môi trường tự nhiên</td>
+        </tr>
+        <tr>
+            <td>Ứng xử với môi trường xã hội</td>
+        </tr>
+    </table>
+    <p>
+        <span style="font-size: 20.5px;">Dưới góc độ đồng đại, hệ thống văn hoá còn có thể có nhiều cách phân chia khác. Chẳng hạn, trong quan hệ với cộng đồng, có thể phân biệt văn hoá dân gian và văn hoá chính thống. Trong quan hệ với địa bàn cư trú, có thể phân biệt văn hoá biển, văn hoá đồng bằng và văn hoá núi. Trong quan hệ với quy mô dân số của tộc người, có sự khác biệt giữa văn hoá người Việt với văn hoá các dân tộc ít người...<sup><a href="#" data-tooltip="Phân biệt “dân tộc” với “tộc người”: Dân tộc là một cộng đồng người có thể gồm nhiều tộc người (hay “sắc tộc”), có chung nguồn gốc, lịch sử hình thành, và có một nền văn hoá, ngôn ngữ chung. Việt Nam là dân tộc có 54 tộc người.">[2]</a></sup> Những cách phân chia này có thể được vận dụng kết hợp với cách phân chia chính (theo hoạt động và theo đối tượng của hoạt động) đã trình bày ở trên.</span>
+    </p>
+    <p>
+        Một giá trị hoặc một nhóm giá trị có thể cùng lúc liên quan đến nhiều thành tố và tiểu hệ khác nhau. Việc xếp một (nhóm) giá trị vào thành tố/tiểu hệ nào sẽ được lựa chọn và xác định cho từng trường hợp cụ thể căn cứ vào vai trò của (nhóm) giá trị đó đối với các thành tố/tiểu hệ và/hoặc sự phù hợp trong việc trình bày những mối quan hệ của chúng.
+    </p>
+    <h3> 1.5. “Cơ sở văn hoá” và các bộ môn văn hoá học</h3>
+    <p>
+        Khoa học nghiên cứu về văn hoá có hai hướng chính: “<i>Nghiên cứu văn hoá</i>” (cultural studies) và “<i>Văn hoá học</i>” (culturology), trong đó văn hoá học đôi hỏi tính hệ thống cao hơn. Văn hoá học như một hướng nghiên cứu và như một ngành đào tạo có thể được xem xét từ nhiều góc độ, bao gồm nhiều chuyên ngành, nhiều môn học:
+    </p>
+    <p>
+        <b><i>Cơ sở văn hoá</i></b> là môn học nhằm giới thiệu những đặc trưng cơ bản cùng các quy luật hình thành và phát triển của một nền văn hoá dân tộc cụ thể. Đối với sinh viên các ngành khoa học xã hội và nhân văn, môn “Cơ sở văn hoá” trang bị những hiểu biết tối thiểu về một nền văn hoá làm cơ sở cho việc đi sâu vào những kiến thức chuyên ngành và để cho khi bước vào đời, có thể tham gia một cách có ý thức vào việc bảo tồn và phát triển văn hoá dân tộc; khi đi ra nước ngoài, có thể góp phần quảng bá văn hoá của dân tộc mình và có cơ sở so sánh để hiểu sâu hơn về văn hoá nước ngoài. Đối với sinh viên chuyên ngành văn hóa học, đây là một môn học mang tính dẫn luận, nhập môn, cung cấp những hiểu biết nền tảng để trên cơ sở đó đi sâu vào các môn chuyên ngành.
+    </p>
+    <p>
+        <b><i>Văn hoá học đại cương</i></b> là một môn chuyên ngành, có trách nhiệm trang bị những tri thức chuyên sâu về các bình diện, các học thuyết, các quan niệm, các cách tiếp cận... trong nghiên cứu văn hoá và văn hoá học.
+    </p>
+    <p>
+        <b><i>Văn hoá học lý luận</i></b>, hay <b><i>Lý luận văn hoá học</i></b>, có thể hiểu là một môn chuyên ngành, nhưng cũng có thể hiểu là một hướng nghiên cứu có mục đích xây dựng các lý thuyết mới về văn hoá học.
+    </p>
+    <p>
+        Dưới góc độ không gian, <b><i>Văn hoá học địa lý</i></b> (hay địa lý - văn hoá học) là một hướng nghiên cứu và một môn học có đối tượng là “địa văn hoá” - văn hoá trong quan hệ với địa lý; có trách nhiệm tìm hiểu đặc điểm văn hoá của các vùng miền, các khu vực, mở rộng hiểu biết về văn hoá theo chiều ngang.
+    </p>
+    <p>
+        Dưới góc độ thời gian, môn <b><i>Văn hoá học lịch sử</i></b> (hay lịch sử - văn hoá học) là một hướng nghiên cứu và một môn học có đối tượng là “sử văn hoá” - văn hoá trong quan hệ với lịch sử; có trách nhiệm khảo sát các sự kiện văn hoá, các giá trị trong tiến trình phát triển văn hoá, mở rộng hiểu biết về văn hoá theo chiều dọc.
+    </p>
+    <p>
+        <b><i>Văn hoá học ứng dụng</i></b> là một hướng nghiên cứu có nhiệm vụ vận dụng và giới thiệu việc vận dụng các thành tựu nghiên cứu thu được trong các chuyên ngành nêu trên vào mọi linh vực, mọi mặt của cuộc sống với các môn như văn hoá nghệ thuật, văn hoá đại chúng, văn hoá quản trị, văn hoá kinh doanh...
+    </p>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    loadHighlights();
+
+    document.addEventListener('mouseup', function(e) {
+        const selection = window.getSelection();
+        if (!selection.rangeCount || selection.isCollapsed) {
+            hidePopup();
+            return;
+        }
+
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        showPopup(rect.left + window.scrollX, rect.bottom + window.scrollY);
+    });
+
+    document.addEventListener('mousedown', function(e) {
+        const popup = document.getElementById('highlight-popup');
+        if (!popup.contains(e.target)) {
+            hidePopup();
+        }
+    });
+});
+
+function showPopup(x, y) {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.left = x + 'px';
+    popup.style.top = y + 'px';
+    popup.style.display = 'block';
+}
+
+function hidePopup() {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.display = 'none';
+}
+
+function highlightText(color) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    if (range.collapsed) return;
+
+    const span = document.createElement('span');
+    span.className = `highlight highlight-${color}`;
+    range.surroundContents(span);
+
+    saveHighlights();
+    hidePopup();
+}
+
+function removeHighlight() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    const parentElement = range.commonAncestorContainer.parentElement;
+
+    if (parentElement.classList.contains('highlight')) {
+        const parent = parentElement.parentNode;
+        while (parentElement.firstChild) {
+            parent.insertBefore(parentElement.firstChild, parentElement);
+        }
+        parent.removeChild(parentElement);
+    }
+
+    saveHighlights();
+    hidePopup();
+}
+
+function saveHighlights() {
+    const content = document.getElementById('text-content').innerHTML;
+    localStorage.setItem('highlightedText', content);
+}
+
+function loadHighlights() {
+    const savedContent = localStorage.getItem('highlightedText');
+    if (savedContent) {
+        document.getElementById('text-content').innerHTML = savedContent;
+    }
+}
+
+</script>
+</html>

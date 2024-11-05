@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang thuật ngữ</title>
+    <!--DƯỚI ĐÂY LÀ PHẦN STYLE CHUNG CHUNG-->
+<style type="text/css">
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 21px;
+        width: 960px;
+        margin: 0 auto;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    p{
+        text-indent: 40px;
+    }
+</style>
+<style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHUNG CHUNG-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO MỤC HIGHLIGHT-->
+<style>
+    .highlight-yellow { background-color: rgb(255, 255, 71); }
+    .highlight-red { background-color: rgb(132, 230, 255); }
+    .highlight-green { background-color: rgb(125, 255, 125); }
+    .highlight-popup {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1000;
+    }
+    .highlight-popup button {
+        margin-right: 10px;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO MỤC HIGHLIGHT-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO MỤC TRẢ LỜI CÂU TƯƠNG TÁC-->
+<style>
+    #textArea {
+        width: 100%;
+        height: 200px;
+    }
+    #saveButton, #clearButton {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO MỤC TRẢ LỜI CÂU TƯƠNG TÁC-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO CHÚ THÍCH-->
+<style type="text/css">
+    a:hover{
+            text-decoration: none;
+        }
+        a[data-tooltip]{
+            border-bottom: 1px dotted #333;
+            position:relative;
+        }
+        a[data-tooltip]::before{
+            content: attr(data-tooltip);
+            position:absolute;
+            background: #ffafaf;
+            font-size:14px;
+            color: black;
+            text-align: justify;
+            padding: 3px 9px;
+            border-radius: 6px;
+            width: 250px;
+            left: -800%;
+            right: -800%;
+            bottom: 100%;
+            display: none;
+        }
+    a[data-tooltip]:hover::before{
+        display: block;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO CHÚ THÍCH-->
+
+
+<link rel="stylesheet" href="cssnoidung.css">
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE ZOOM ẢNH-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
+    <style>
+        .my-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .my-gallery img {
+            /* width: 200px; */
+            height: auto;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE ZOOM ẢNH-->
+
+</head>
+
+<body id="text" >
+    <!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+    <div class="thanhphai">
+        <a target="_self" href="/File htmlnoidung/trangloicamon.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+    <div class="thanhtrai">
+        <a target="_self" href="/File htmlnoidung/chuong17phan1.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+    <!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN PHẦN POP UP ĐỂ HIGHLIGHT-->
+    <div class="highlight-popup" id="highlight-popup">
+        <!-- <p align="center" id="takenote">Ghi chú</p> -->
+        <button onclick="highlightText('yellow')" id="notevang"><i class="bi bi-square-fill"></i></button>
+        <button onclick="highlightText('red')" id="notedo"><i class="bi bi-square-fill"></i></button>
+        <button onclick="highlightText('green')" id="notexanh"><i class="bi bi-square-fill"></i></button>
+        <button onclick="removeHighlight()" id="xoanote"><i class="bi bi-eraser-fill"></i></i></button>
+    </div>
+<!--TRÊN ĐÂY LÀ PHẦN PHẦN POP UP ĐỂ HIGHLIGHT-->
+
+
+
+<!--PHẦN BẮT ĐẦU NỘI DUNG CHÍNH-->
+
+    <!-- <div align="center" style="margin-top: 20px;"><img src="/Fileanhnoidung/bannerchuong16.png"></div> -->
+    <h1 align="center">
+       Thuật ngữ
+    </h1>
+   
+    <!-- <h2>
+        1. Hành trình đi với lý tưởng của đời mình
+    </h2> -->
+    <p>
+        Bảng màu (color palette): Là sự chọn lựa màu sắc của người họa sĩ trong một tác phẩm nghệ thuật.
+    </p>
+    <p>Bích họa (fresco): Fresco trong tiếng Ý có nghĩa là “tươi mới”, là một kỹ thuật vẽ lên lớp vữa trát tường còn ướt. Đây là một chất liệu mau khô, ít cho phép pha trộn màu sắc, do đó đặc trưng của tranh bích họa là hạn chế hơn về màu sắc nếu so sánh với tranh sơn dầu.</p>
+    <p>
+        Biến cố Truyền tin (Annunciation): Theo truyền thống của Kitô giáo, Tổng lãnh thần Gabriel báo tin cho Mary rằng nàng sẽ là mẹ của Chúa. Bố cục (composition): Là sự sắp xếp và phân bố các yếu tố thị giác trong một tác phẩm nghệ thuật.
+    </p>
+    <p>
+        Cân bằng bất đối xứng (asymmetrical balance): Là sự cân bằng tổng thể của bố cục được tạo ra bởi nhiều yếu tố khác biệt, như màu, hình, hay chất, và mỗi yếu tố này tương quan với “trọng lượng” của yếu tố kia. Cân bằng (balance): Là sự phân bổ các yếu tố thị giác của tác phẩm nghệ thuật một cách hài hòa.
+    </p>
+    <p>
+        Chất (texture): Trong nghệ thuật, là đặc điểm bề mặt của một tác phẩm. (Xem chất thực và chất ảo).
+    </p>
+    <p>
+        Chất ảo (implied texture): Trong hội họa, khi đặc điểm bề mặt của những hình khối được biểu hiện một cách chính xác thông qua việc tạo khối và màu sắc (chứ không phải độ dày của sơn), cho cảm giác có thể chạm vào được; đặc biệt phổ biến ở chất liệu sơn dầu.
+    </p>
+    <p>
+        Chất thực (actual texture): Trong hội họa, khi sơn được vẽ dày lên mặt tranh (xem Lối vẽ đáp - impasto), tạo ra một hiện thực ba chiếu trong bố cục.
+    </p>
+    <p>
+        Che lấp (overlapping): Là khi một hình ảnh trông như đang đứng trước một hình ảnh khác trên mặt phẳng hai chiều, do đó tạo nên ảo giác về độ sâu ba chiều.
+    </p>
+    <p>
+        Chủ nghĩa Lý tưởng (idealism): Là một trào lưu nghệ thuật dựa trên ý tưởng về sự hoàn hảo theo tiêu chuẩn của một nền văn hóa hay người nghệ sĩ.
+    </p>
+    <p>
+        Chủ nghĩa u tối (hay “lối vẽ tối tăm”) (tenebrism): Là sự cường điệu hỏa ánh sáng và bóng tối trong một bố cục, chuyển từ vùng sáng sang vùng tối với rất ít hoặc không có những độ trung gian (xem tạo hình). Caravaggio, họa sĩ người Ý theo phong cách Baroque, là người đã phát triển phong cách này nhằm nâng cao sự kịch tính trong tranh.
+    </p>
+    <p>
+        Cột Caryatid: Trong lĩnh vực kiến trúc, chỉ một loại cột chống được tạc hình phụ nữ.
+    </p>
+    <p>
+        Dư ảnh (afterimage): Liên quan đến màu sắc, là hiện tượng mắt nhìn thấy màu bổ túc (màu đối lập) với một màu nào đó (ví dụ, nếu bạn liên tục nhìn một chấm đỏ trong vòng ba mươi giây, rất có thể bạn sẽ nhìn thấy dư ảnh màu xanh lá).
+    </p>
+    <p>
+        Đá đỉnh vòm (keystone): Phiền đá ở giữa, trên cùng của một khung vòm, có chức năng giữ cho khung vòm khỏi đổ vào trong.
+    </p>
+    <p>
+        Đăng đối (bilateral symmetry): Trong một bố cục, khi phần bên trái là sự phản chiếu của phần bên phải, tạo ra một sự cân bằng hoàn hảo về thị giác.
+    </p>
+    <p>
+        Đường ảo (implied line): Là một đường đứt quãng, một chuỗi các điểm, hay một đường vô hình (như tia vô hình trong ánh mắt) mà người xem tự hoàn thiện trong đầu.
+    </p>
+    <p>
+        Đường cong chữ S (S curve): Những tư thể hiện thực trong điêu khắc do người Hy Lạp cổ đại phát triển nên, dựa trên những quan sát rằng các cơ liên tục co và giãn, chuyển trụ trước và trụ sau trong lúc đứng. Còn được gọi là đối trọng (contrapposto).
+    </p>
+    <p>
+        Đường trực giao (orthogonal): Là những đường song song, vuông góc với mặt tranh, hội tụ tại điểm tụ. Những đường này tạo ra ảo giác về chiều sâu trên một mặt phẳng hai chiều.
+    </p>
+    <p>
+        Đường viền (contour line): Là đường bên ngoài một hình thể hay hình khối, tách nó ra khỏi những gì bao quanh.
+    </p>
+    <p>
+        Gian giữa (nave): Là gian ở trung tâm một giáo đường hay nhà thờ, nơi cộng đoàn tụ hội.
+    </p>
+    <p>
+        Hiệu ứng khói (sfumato): Trong hội họa, là kỹ thuật tạo ra hiệu ứng lờ mờ hay hư ảo, phỏng theo điều kiện của khí quyển vào lúc trời nhá nhem tối; đặc biệt hay được Leonardo da Vinci sử dụng.
+    </p>
+    <p>
+        Hình bẹt (shape): Một mảng nổi bật trong bố cục hay trông như tách biệt khỏi không gian xung quanh do ranh giới ảo hoặc rõ ràng, được tạo ra nhờ những thay đổi trong sắc độ, màu sắc, hay chất.
+    </p>
+    <p>
+        Kết cấu cột trụ-và-đà ngang (post-and-lintel construction): Là kết cấu gồm hai cột trụ thẳng đứng nâng một đà ngang; được dùng trong việc xây dựng các đền đài thời Hy Lạp cổ đại trước khi người La Mã phát minh ra kết cấu khung vòm linh hoạt hơn.
+    </p>
+    <p>
+        Kết cấu khung vòm (arch): Những khối có hình cái nêm giúp tạo ra kiểu vòm cung tròn (kiểu Roman) hay nhọn (kiểu Gothic), có khả năng mở rộng không gian lớn hơn so với hệ thống cột trụ-và-đà ngang.
+    </p>
+    <p>
+        Lắp ghép (assemblage): Là việc nhặt nhạnh chắp ghép các đồ vật ba chiều lại với nhau để tạo thành một tác phẩm nghệ thuật. Những đồ vật này sẵn có hoặc được tạo mới bởi người nghệ sĩ. Thông thường, một chất liệu hai chiều, như tranh, sẽ được kết hợp vào.
+    </p>
+    <p>
+        Màu bổ túc (complementary color): Là những cặp màu đối lập nhau trong bánh xe màu (như xanh lá/đỏ, xanh dương/cam, vàng/tím). Khi những màu này đứng cạnh nhau, ta cảm nhận được độ nguyên và cường độ lớn hơn của từng màu. (Xem Dư ảnh).
+    </p>
+    <p>
+        Màu lạnh (cool color): Bao gồm các xanh lá, xanh dương và tím; những màu này có vẻ lùi ra xa khỏi người nhìn.
+    </p>
+    <p>
+        Màu nóng: Gồm có màu vàng, cam và đỏ; những màu này tạo cảm giác tiến ra trước, về phía người nhìn.
+    </p>
+    <p>
+        Màu tempera: Một loại màu vẽ mau khô được làm bằng cách trộn lòng đỏ trứng, nước và bột màu, được dùng rộng rãi để vẽ trên panel từ thời hậu kỳ Trung cổ đến thế kỷ 15.
+    </p>
+    <p>
+        Nghệ thuật Biểu hiện (Expressionistic art): Một phong cách nghệ thuật cường điệu hóa màu sắc và hình khối để đem lại sự rung cảm cao độ nơi người xem.
+    </p>
+    <p>
+        Nghệ thuật Hiện thực (realistic art) hay chủ nghĩa Hiện thực (realism): Một phong cách nghệ thuật dựa trên những gì chúng ta chứng kiến tận mắt và được diễn tả với rất ít hoặc không có sự cường điệu, bóp méo hay thêm thắt. Trào lưu nghệ thuật thế kỷ 19 này được do Gustave Courbet khai sinh.
+    </p>
+    <p>
+        Nghệ thuật miêu tả (representational art): Một phong cách nghệ thuật dựa trên những điều mắt ta thấy (thế giới khách quan), rồi được thể hiện bằng một lối vẽ dễ hiểu.
+    </p>
+    <p>
+        Nghệ thuật trừu tượng (abstract art): Một phong cách nghệ thuật không dựa trên thế giới khách quan như mắt thấy, mà dựa trên những yếu tố đã được rút gọn và giản hóa, tạo nên hiện thực thị giác. Phong cách này còn được gọi là nghệ thuật phi biểu hình.
+    </p>
+    <p>
+        Nhân diện (physiognomy): Là những nét đặc trưng trên gương mặt của mỗi người. Cả nghệ thuật La Mã và hội họa Phục hưng phương Bắc đều tập trung vào những chi tiết hiện thực trên gương mặt.
+    </p>
+    <p>
+        Nhịp điệu (rhythm): Là cảm giác về chuyển động hay nguồn năng lượng rải rác trong một bố cục, được tạo ra do sự lặp lại của các yếu tố thị giác.
+    </p>
+    <p>
+        Phối cảnh không khí (atmospheric perspective): Là kỹ thuật tạo ra chiều sâu về không gian trên một mặt phẳng hai chiều bằng cách hạn chế chi tiết tả chất và bảng màu trong bố cục, như khi được nhìn từ một khoảng xa mờ sương.
+    </p>
+    <p>
+        Phối cảnh tuyến tính (linear perspective): Xuất hiện từ thời Phục hưng Ý, đây là một hệ thống có tính toán nhằm sắp đặt không gian trong nghệ thuật hai chiều. Những đường song song (đường trực giao) hội tụ tại điểm tụ trên đường tầm mắt, tạo ra chiều sâu có tính thuyết phục. Quan hệ hình-nền (figure-ground relationship): Mối quan hệ giữa một hình bẹt (hình thể) nổi bật và môi trường bao quanh nó (phông nền). Sắc độ (value): Là độ đậm/nhạt tương đối của một màu.
+    </p>
+    <p>
+        Sự cân xứng (proportion): Là sự tương quan giữa kích thước của các phần với tổng thể trong một bố cục.
+    </p>
+    <p>
+        Tạo khối (modeling): Trong nghệ thuật hai chiều là việc tạo ra ảo giác về khối và chiều sâu bằng cách luân phiên chuyển đổi sáng-tối. Trong lĩnh vực điều khác là việc thao tác với những vật liệu mềm dẻo như đất sét hay sáp để tạo thành một hình thể ba chiều.
+    </p>
+    <p>
+        Tile (scale): Là kích thước tương đối của một nhân vật hay hình dáng so với những vật thể xung quanh, hoặc so với kích thước chuẩn thông thường mà ta biết.
+    </p>
+    <p>
+        Tiên phong (avant-garde): Được dùng để chỉ các nghệ sĩ đi theo những đường hưởng nghệ thuật trái với lề thói thông thường. Từ này được dùng rộng rãi vào giữa thế kỷ 19 tại Paris để diễn tả những nghệ sĩ có phong cách đối lập với các quy tắc của Viện hàn lâm.
+    </p>
+    <p>
+        Tiểu tượng học (iconography): Ý nghĩa tượng trưng của những hình tượng được mô tả trong một tác phẩm nghệ thuật.
+    </p>
+    <p>
+        Tổ bỏng (chiaroscuro): Sự chuyển từ sáng sang tối nhằm tạo ra một ảo giác về chiều sâu trên mặt phẳng hai chiều – giống như bề mặt ba chiều, tròn trịa của cơ thể người.
+    </p>
+    <p>
+        Trụ bướm (flying buttresses): Là những cột chịu lực bên ngoài các nhà thờ theo lối kiến trúc Gothic, cho phép dựng nên những ô cửa kính màu cao trong nội thất.
+    </p>
+    <p>
+        Trompe l'oeil: Tiếng Pháp có nghĩa là “lừa mắt,” dùng để chỉ một bức tranh được vẽ giống thật đến nỗi nó khiến cho người xem phải suy nghĩ liệu đó có phải là một thứ “có thật” hay không.
+    </p>
+    <p>
+        Tranh sinh hoạt (genre painting): Là những bức tranh vẽ các hình thể hiện thực, miêu tả những cảnh tượng bình dị trong cuộc sống đời thường – như việc làm bơ hay giặt giũ.
+    </p>
+    <p>
+        Tranh lịch sử (historical painting history painting): Là loại tranh mô tả những câu chuyện lịch sử, thần thoại hay kinh thánh. Đối với nghệ thuật phương Tây, từ thời Phục hưng cho đến thế kỷ 20, tranh lịch sử được xem là đỉnh cao của nghệ thuật thị giác bởi tính răn dạy đạo đức cao quý của chúng cũng như sự cầu kì và khéo léo trong bố cục.
+    </p>
+    <p>
+        Tương quan kích thước (relative size): Là mối tương quan về kích thước của các vật thể hay hình thể với nhau, hay giữa chúng với bối cảnh chung quanh trong một bố cục. Sử dụng nguyên tắc bố cục này có thể tạo ra được ảo giác về không gian ba chiều trên một bề mặt phẳng hai chiều.
+    </p>
+    <p>
+        Tượng bản thân (bust): Trong điêu khắc, là sự khắc họa phần đầu, vai và ngực trên của cơ thể người.
+    </p>
+    <p>
+        Vẽ đắp (impasto): Là một kỹ thuật dùng những mảng sơn dầu trên bề mặt tranh, tạo ra chất thực trong bố cục.
+    </p>
+    <p>
+        Vẽ ngoài trời (plein-air painting): Là quá trình vẽ, từ đầu đến cuối, đều ở ngoài trời; plein-air trong tiếng Pháp có nghĩa là “ngoài trời”. Khái niệm này được các nghệ sĩ Pháp theo phái Ấn tượng cuối thế kỷ 19 ra sức ủng hộ.
+    </p>
+    <p>
+        Vòm bán nguyệt (barrel vault): Trong lĩnh vực kiến trúc, những mái vòm liên kết với nhau tạo ra một vòm trần hình bán nguyệt, còn được gọi là vòm đường hầm.
+    </p>
+    <p>
+        Vòm chữ thập (groin vault): Một kiểu vòm được tạo ra do hai vòm bán nguyệt cắt nhau vuông góc.
+    </p>
+    <p>
+        Yếu tố thị giác (visual elements): bao gồm đường nét, màu sắc, chất, hình...; được sắp xếp bởi người họa sĩ nhằm tạo ra một bố cục. Còn được gọi là những yếu tố tạo hình.
+    </p>
+
+    
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+    <div id="backtop1" class="vecuoitrang" >
+        <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+    </div>
+    <div id="backtop" class="vedautrang">
+        <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+    </div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+
+
+
+
+<!-- DƯỚI ĐÂY LÀ CẤU TRÚC CẦN CÓ CHO PHẦN ZOOM ẢNH -->
+
+    <!-- PhotoSwipe core JS files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+    <!-- PhotoSwipe template -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- TRÊN ĐÂY LÀ CẤU TRÚC CẦN CÓ CHO PHẦN ZOOM ẢNH -->
+
+
+
+</body>
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO NÚT BACK TO TOP-->
+<script>
+    function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function scrollToBottom() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO NÚT BACK TO TOP-->
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC HIGHLIGHT-->
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    loadHighlights();
+
+    document.addEventListener('mouseup', function(e) {
+        const selection = window.getSelection();
+        if (!selection.rangeCount || selection.isCollapsed) {
+            hidePopup();
+            return;
+        }
+
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        showPopup(rect.left + window.scrollX, rect.bottom + window.scrollY);
+    });
+
+    document.addEventListener('mousedown', function(e) {
+        const popup = document.getElementById('highlight-popup');
+        if (!popup.contains(e.target)) {
+            hidePopup();
+        }
+    });
+});
+
+function showPopup(x, y) {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.left = x + 'px';
+    popup.style.top = y + 'px';
+    popup.style.display = 'block';
+}
+
+function hidePopup() {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.display = 'none';
+}
+
+function highlightText(color) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    if (range.collapsed) return;
+
+    const span = document.createElement('span');
+    span.className = `highlight highlight-${color}`;
+    range.surroundContents(span);
+
+    saveHighlights();
+    hidePopup();
+}
+
+function removeHighlight() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    const parentElement = range.commonAncestorContainer.parentElement;
+
+    if (parentElement.classList.contains('highlight')) {
+        const parent = parentElement.parentNode;
+        while (parentElement.firstChild) {
+            parent.insertBefore(parentElement.firstChild, parentElement);
+        }
+        parent.removeChild(parentElement);
+    }
+
+    saveHighlights();
+    hidePopup();
+}
+
+// Hàm lưu các highlight vào local storage
+function saveHighlights() {
+    let highlights = document.querySelectorAll('.highlight-yellow, .highlight-green, .highlight-red');
+    let highlightData = [];
+
+    highlights.forEach((highlight) => {
+        highlightData.push({
+            text: highlight.textContent,
+            class: highlight.className
+        });
+    });
+
+    localStorage.setItem('highlights', JSON.stringify(highlightData));
+}
+// Hàm tải các highlight từ local storage
+function loadHighlights() {
+    let highlightData = JSON.parse(localStorage.getItem('highlights') || '[]');
+    let bodyHtml = document.body.innerHTML;
+
+    highlightData.forEach((highlight) => {
+        let tempDiv = document.createElement('div');
+        tempDiv.textContent = highlight.text;
+        let highlightHtml = `<span class="${highlight.class}">${tempDiv.innerHTML}</span>`;
+        bodyHtml = bodyHtml.replace(highlight.text, highlightHtml);
+    });
+    document.body.innerHTML = bodyHtml;
+}
+
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC HIGHLIGHT-->
+
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC CỦA CÂU HỎI TƯƠNG TÁC-->
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const textArea = document.getElementById('textArea');
+    const saveButton = document.getElementById('saveButton');
+    const clearButton = document.getElementById('clearButton');
+
+    // Load the saved text from Local Storage when the page loads
+    const savedText = localStorage.getItem('textAreaContent');
+    if (savedText) {
+        textArea.value = savedText;
+    }
+
+    // Save the text to Local Storage when the "Save" button is clicked
+    saveButton.addEventListener('click', function() {
+        localStorage.setItem('textAreaContent', textArea.value);
+        alert('Bạn muốn lưu ghi chép của mình?');
+    });
+
+    // Clear the text from Local Storage and the text area when the "Clear" button is clicked
+    clearButton.addEventListener('click', function() {
+        localStorage.removeItem('textAreaContent');
+        textArea.value = '';
+        alert('Bạn muốn xóa ghi chép?');
+    });
+});
+
+</script> -->
+<script>
+    // Function to save data to local storage
+    function saveData(id) {
+        const data = document.getElementById(id).value;
+        localStorage.setItem(id, data);
+        alert('Câu trả lời của bạn đã được lưu!');
+    }
+
+    // Function to load data from local storage
+    function loadData() {
+        const writingAreas = document.querySelectorAll('.writing-area');
+        writingAreas.forEach(area => {
+            const savedData = localStorage.getItem(area.id);
+            if (savedData) {
+                area.value = savedData;
+            }
+        });
+    }
+
+    // Load data when the page loads
+    window.onload = loadData;
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC CỦA CÂU HỎI TƯƠNG TÁC-->
+
+
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC ZOOM ẢNH-->
+<script>
+    // Initialize PhotoSwipe
+    document.addEventListener('DOMContentLoaded', function() {
+        var initPhotoSwipeFromDOM = function(gallerySelector) {
+            var parseThumbnailElements = function(el) {
+                var thumbElements = el.childNodes,
+                    numNodes = thumbElements.length,
+                    items = [],
+                    figureEl,
+                    linkEl,
+                    size,
+                    item;
+
+                for (var i = 0; i < numNodes; i++) {
+                    figureEl = thumbElements[i];
+
+                    if (figureEl.nodeType !== 1) {
+                        continue;
+                    }
+
+                    linkEl = figureEl.children[0];
+                    size = linkEl.getAttribute('data-size').split('x');
+
+                    item = {
+                        src: linkEl.getAttribute('href'),
+                        w: parseInt(size[0], 10),
+                        h: parseInt(size[1], 10)
+                    };
+
+                    if (figureEl.children.length > 1) {
+                        item.title = figureEl.children[1].innerHTML;
+                    }
+
+                    if (linkEl.children.length > 0) {
+                        item.msrc = linkEl.children[0].getAttribute('src');
+                    }
+
+                    item.el = figureEl;
+                    items.push(item);
+                }
+
+                return items;
+            };
+
+            var closest = function closest(el, fn) {
+                return el && (fn(el) ? el : closest(el.parentNode, fn));
+            };
+
+            var onThumbnailsClick = function(e) {
+                e = e || window.event;
+                e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                var eTarget = e.target || e.srcElement;
+
+                var clickedListItem = closest(eTarget, function(el) {
+                    return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                });
+
+                if (!clickedListItem) {
+                    return;
+                }
+
+                var clickedGallery = clickedListItem.parentNode,
+                    childNodes = clickedListItem.parentNode.childNodes,
+                    numChildNodes = childNodes.length,
+                    nodeIndex = 0,
+                    index;
+
+                for (var i = 0; i < numChildNodes; i++) {
+                    if (childNodes[i].nodeType !== 1) {
+                        continue;
+                    }
+
+                    if (childNodes[i] === clickedListItem) {
+                        index = nodeIndex;
+                        break;
+                    }
+                    nodeIndex++;
+                }
+
+                if (index >= 0) {
+                    openPhotoSwipe(index, clickedGallery);
+                }
+                return false;
+            };
+
+            var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                var pswpElement = document.querySelectorAll('.pswp')[0],
+                    gallery,
+                    options,
+                    items;
+
+                items = parseThumbnailElements(galleryElement);
+
+                options = {
+                    galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+                    getThumbBoundsFn: function(index) {
+                        var thumbnail = items[index].el.getElementsByTagName('img')[0],
+                            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                            rect = thumbnail.getBoundingClientRect();
+
+                        return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+                    }
+                };
+
+                if (fromURL) {
+                    if (options.galleryPIDs) {
+                        for (var j = 0; j < items.length; j++) {
+                            if (items[j].pid == index) {
+                                options.index = j;
+                                break;
+                            }
+                        }
+                    } else {
+                        options.index = parseInt(index, 10) - 1;
+                    }
+                } else {
+                    options.index = parseInt(index, 10);
+                }
+
+                if (isNaN(options.index)) {
+                    return;
+                }
+
+                if (disableAnimation) {
+                    options.showAnimationDuration = 0;
+                }
+
+                gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                gallery.init();
+            };
+
+            var galleryElements = document.querySelectorAll(gallerySelector);
+
+            for (var i = 0, l = galleryElements.length; i < l; i++) {
+                galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                galleryElements[i].onclick = onThumbnailsClick;
+            }
+        };
+
+        initPhotoSwipeFromDOM('.my-gallery');
+    });
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC ZOOM ẢNH-->
+
+
+
+</html>

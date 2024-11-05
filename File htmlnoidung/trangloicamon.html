@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang lời cảm ơn</title>
+    <!--DƯỚI ĐÂY LÀ PHẦN STYLE CHUNG CHUNG-->
+<style type="text/css">
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 21px;
+        width: 960px;
+        margin: 0 auto;
+        text-align: justify;
+        line-height: 1.5;
+    }
+    p{
+        text-indent: 40px;
+    }
+</style>
+<style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHUNG CHUNG-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO MỤC HIGHLIGHT-->
+<style>
+    .highlight-yellow { background-color: rgb(255, 255, 71); }
+    .highlight-red { background-color: rgb(132, 230, 255); }
+    .highlight-green { background-color: rgb(125, 255, 125); }
+    .highlight-popup {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1000;
+    }
+    .highlight-popup button {
+        margin-right: 10px;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO MỤC HIGHLIGHT-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO MỤC TRẢ LỜI CÂU TƯƠNG TÁC-->
+<style>
+    #textArea {
+        width: 100%;
+        height: 200px;
+    }
+    #saveButton, #clearButton {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO MỤC TRẢ LỜI CÂU TƯƠNG TÁC-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE CHO CHÚ THÍCH-->
+<style type="text/css">
+    a:hover{
+            text-decoration: none;
+        }
+        a[data-tooltip]{
+            border-bottom: 1px dotted #333;
+            position:relative;
+        }
+        a[data-tooltip]::before{
+            content: attr(data-tooltip);
+            position:absolute;
+            background: #ffafaf;
+            font-size:14px;
+            color: black;
+            text-align: justify;
+            padding: 3px 9px;
+            border-radius: 6px;
+            width: 250px;
+            left: -800%;
+            right: -800%;
+            bottom: 100%;
+            display: none;
+        }
+    a[data-tooltip]:hover::before{
+        display: block;
+    }
+</style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE CHO CHÚ THÍCH-->
+
+
+<link rel="stylesheet" href="cssnoidung.css">
+
+<!--DƯỚI ĐÂY LÀ PHẦN STYLE ZOOM ẢNH-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/default-skin/default-skin.min.css">
+    <style>
+        .my-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .my-gallery img {
+            /* width: 200px; */
+            height: auto;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+<!--TRÊN ĐÂY LÀ PHẦN STYLE ZOOM ẢNH-->
+
+</head>
+
+<body id="text" >
+    <!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+    <div class="thanhphai">
+        <a target="_self" href="/Fileanhchogiaodien/trangbiasau.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+    <div class="thanhtrai">
+        <a target="_self" href="/File htmlnoidung/trangthuatngu.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+    <!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN PHẦN POP UP ĐỂ HIGHLIGHT-->
+    <div class="highlight-popup" id="highlight-popup">
+        <!-- <p align="center" id="takenote">Ghi chú</p> -->
+        <button onclick="highlightText('yellow')" id="notevang"><i class="bi bi-square-fill"></i></button>
+        <button onclick="highlightText('red')" id="notedo"><i class="bi bi-square-fill"></i></button>
+        <button onclick="highlightText('green')" id="notexanh"><i class="bi bi-square-fill"></i></button>
+        <button onclick="removeHighlight()" id="xoanote"><i class="bi bi-eraser-fill"></i></i></button>
+    </div>
+<!--TRÊN ĐÂY LÀ PHẦN PHẦN POP UP ĐỂ HIGHLIGHT-->
+
+
+
+<!--PHẦN BẮT ĐẦU NỘI DUNG CHÍNH-->
+
+    <!-- <div align="center" style="margin-top: 20px;"><img src="/Fileanhnoidung/bannerchuong16.png"></div> -->
+    <h1 align="center">
+       Lời cảm ơn
+    </h1>
+   
+    <!-- <h2>
+        1. Hành trình đi với lý tưởng của đời mình
+    </h2> -->
+    <p>
+        Giờ thì tôi đã hiểu tại sao phần “Lời cảm ơn” thường bắt đầu với “Trước hết,... Trong suốt nhiều năm, chồng tôi Riley Quarles đã trước hết, làng nghe những lời bộc bạch và những nỗi thất vọng hằng ngày của tôi, anh đã đưa ra lời khuyên, thể hiện sự ủng hộ và một thái độ thấu hiểu. Anh đã truyền cảm hứng cũng như thách thức tôi làm tất cả những gì phải làm (Anh thường nói: “Phải kiên trì đến cùng”). Và anh còn hào phóng chia sẻ với tôi những ý tưởng sáng tạo và vốn kiến thức chuyên môn đáng kể của mình, cũng như dành rất nhiều thời gian quý báu cuối tuần cho “quyển sách này”. Tình yêu nằm trong những tiểu tiết, nhưng cũng ở những suy đoán mỗi ngày. Cảm ơn anh, tình yêu của em, vì đã giúp em bằng nhiều cách để thực hiện được quyền sách này, vì đã luôn nói rằng “Anh rất sẵn lòng” dù rằng đôi khi có thể không phải là như vậy. Và cảm ơn anh vì đã yêu em và biết rằng em cũng yêu anh.
+    </p>
+    <p>
+        Gia đình và bạn bè cũng đã hết lòng ủng hộ tôi bằng vô số những cuộc trò chuyện trong nhiều năm qua. Với những người tôi yêu quý, những người đã thốt lên những từ “Quyển sách của bạn tới đâu rồi?" tối muốn cảm ơn mọi người vì đã có đủ lòng tin nơi một người mới viết sách lần đầu như tôi mà hỏi một cách nghiêm túc như thế. Những từ ngữ ấy lúc nào cũng như những hạt phấn tiên rải xuống tôi!
+    </p>
+    <p>
+        Tôi đặc biệt muốn cảm ơn những người đã giúp đỡ tôi không chỉ vì đã thúc giục tôi ngay từ lúc khởi đầu và trong suốt chặng đường, mà còn vì đã bỏ thời gian và tài năng của mình để đọc và góp ý cho toàn bộ bản thảo. Riley (người thậm chí đã trả lời những câu hỏi trong quyển sách để dự đoán trải nghiệm của độc giả!), khả năng trình bày những ý tưởng phức tạp một cách gãy gọn của anh đã liên tục truyền cảm hứng cho em để em có thể trau chuốt từ ngữ của mình trong suốt quá trình viết sách. Sara Griffin, đôi mắt tinh tường và trái tim nồng ấm của chị đã truyền cho em lòng can đảm đúng những lúc em cần nhất. Claire Reynolds, cảm ơn chị! Niềm đam mê, lòng hăng hái, tình yêu, và niềm tin tuyệt đối của chị nơi em – ngay từ lúc em trình bày ý tưởng này với chị – đã giúp em luôn vững vàng trong suốt bốn năm qua. Sự đóng góp của chị vào văn phong của quyển sách này và quyển sách tương tác là rất lớn. Và Linda “Susie” Statzer, chị gái đồng thời là người bạn đường trong những chuyến đi của em, sự quan tâm không ngừng và lòng tin của chị về quyển sách có ý nghĩa rất lớn với em. Cảm ơn chị vì đã chia sẻ những hiểu biết sâu sắc và khả năng viết lách xuất sắc của mình. Hơn nữa, em phải nói rằng, việc nhìn thấy chị nồng nhiệt say mê nghệ thuật trong suốt những năm qua luôn nhắc nhở em về khả năng của nghệ thuật trong việc giúp ta mở rộng lòng mình. Quả là một niềm vui sướng khi nhìn chị! Bốn anh chị đã tự nguyện dấn thân vào con đường tiềm ấn những gập ghềnh này, đã đủ tôn trọng em để đưa ra những lời phê bình trung thực. Điều đó có ý nghĩa với em nhiều hơn những gì bất cứ ai trong các anh chị có thể biết được.
+    </p>
+    <p>
+        Rees Hughes, Amy Uyeki, và Stasia Walters, cảm ơn các bạn vì sự cổ vũ không ngừng nghỉ, vì đã đọc những phiên bản trước đây, cũng như đặt những câu hỏi xác đáng, và chân thành đóng góp những ý tưởng sáng tạo và kiến thức chuyên môn của mình vào dự án này ngay từ những ngày đầu. Tất cả các bạn đã giúp tôi hoàn thành quyển sách và giữ đúng những ý định của mình. Tôi yêu quý và cảm ơn tất cả các bạn.
+    </p>
+    <p>
+        Quyển ghi chép này phản ánh một thời kỳ lùi lại và nhìn vào một bức tranh rộng lớn hơn. Tôi muốn cảm ơn cha mẹ tôi, Norman và Norma Statzer, vì đã truyền lại thói quen này cho tôi. Có thể điều này nằm sẵn trong máu của chúng tôi, trong gien đã khiến chúng tôi ngồi xuống với ly sữa nóng, nhìn ra ngoài ô cửa và trầm tư... và thưởng thức vẻ đẹp trong khung cảnh đó! Con muốn cảm ơn cha mẹ vì đã yêu thương và ủng hộ con vô điều kiện trong suốt cuộc đời con. Mẹ, những lời khuyên hữu ích của mẹ là “hãy tự chăm sóc bản thân” đã giúp con bám sát vào những điều cần thiết. Nghệ thuật là một điều cần thiết. Và Cha, con cảm ơn cha vì đã cho phép con sử dụng bức vẽ của cha trong sách. Cuộc đời êm đềm tươi đẹp của cha đã đi vào phần tinh túy nhất của quyển sách, như một lời nhắc nhở rằng hãy sống chậm lại và cảm nhận thật rõ những điều tuyệt diệu của cuộc sống đang ở trước mắt ta. Như một lần rất lâu rồi, lúc chúng ta đang lái xe qua những ruộng bắp ở Iowa, cha đã khuyên con điều này, “Đừng chờ đợi để được tận hưởng cuộc sống của con. Nó chính là lúc này đây!”. Con đã nghe cha. Con yêu cha mẹ vô cùng!
+    </p>
+    <p>
+        Hai mươi năm trước, tôi ngồi xuống và bắt đầu viết quyển sách này. tưởng chủ đạo, rằng nghệ thuật có thể giúp chúng ta hiểu thấu bản thân cũng như những người xung quanh, đã dẫn dắt tôi. Nhưng, như bất kỳ một giáo viên nào cũng hiểu, nghề đi dạy chẳng có nhiều thời gian cho việc viết sách. Bốn năm trước, tôi nghỉ dạy và bắt đầu viết. Và bây giờ thì tôi nhận ra rằng tôi đã rất cần 20 năm dạy học đó, 20 năm lắng nghe sự thông thái và sự tò mò của những sinh viên, để hỗ trợ tôi trong việc hình thành nên quyển sách này và quyển sách tương tác. Vì vậy, tôi cảm ơn các em, sinh viên của tôi, những người đã luôn nhắc tôi phải nhìn kỳ hơn, nghiên cứu sâu hơn, và tận hưởng trải nghiệm của việc học hỏi.
+    </p>
+    <p>
+        Với tôi, nghệ thuật là một thứ tỉnh hoa trí tuệ khó năm bắt. Chẳng có một thứ lẽ thói để bám víu vào, hay một lời nguyện để thế. Và lời hứa duy nhất mà nó đảm bảo có lẽ là việc để ra ý nghĩa cho giây phút hiện tại. Điều này hàm chứa một điều huyền diệu, thậm chí là những khoảnh khác ngất ngây vì hạnh phúc. Cảm ơn các nghệ sĩ vì đã lột tả cái đẹp và hé lộ những chân lý vĩ đại.
+    </p>
+    <p>
+        Cuối cùng, xin gửi đến bạn – người đọc quyển sách này và ghi số tay. Bạn đang cầm trên tay quyển sách này bởi vì một điều gì đó trong bạn biết rằng bạn to lớn hơn con người hiện tại. Từ tận đáy lòng mình, bạn biết rằng cuộc sống của mình rất ý nghĩa. Dù thông qua tìm hiểu kỹ hơn về bản thân hay nghiên cứu về nghệ thuật nói chung, thì bạn cũng đang rèn luyện những tiềm năng cao quý hơn của mình ở đây. Tôi thật lòng mong rằng khi đọc xong quyền Hiểu và thưởng thức một tác phẩm mỹ thuật, bạn sẽ tự truyền cảm hứng cho chính mình, và thấy được vẻ rực rỡ của cuộc đời bạn, ở đây và ngay lúc này. Cảm ơn bạn vì đã lắng nghe sự thông thái tĩnh lặng của chính mình.
+    </p>
+
+    
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+    <div id="backtop1" class="vecuoitrang" >
+        <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+    </div>
+    <div id="backtop" class="vedautrang">
+        <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+    </div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+
+
+
+
+<!-- DƯỚI ĐÂY LÀ CẤU TRÚC CẦN CÓ CHO PHẦN ZOOM ẢNH -->
+
+    <!-- PhotoSwipe core JS files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+    <!-- PhotoSwipe template -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- TRÊN ĐÂY LÀ CẤU TRÚC CẦN CÓ CHO PHẦN ZOOM ẢNH -->
+
+
+
+</body>
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO NÚT BACK TO TOP-->
+<script>
+    function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function scrollToBottom() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+}
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO NÚT BACK TO TOP-->
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC HIGHLIGHT-->
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    loadHighlights();
+
+    document.addEventListener('mouseup', function(e) {
+        const selection = window.getSelection();
+        if (!selection.rangeCount || selection.isCollapsed) {
+            hidePopup();
+            return;
+        }
+
+        const range = selection.getRangeAt(0);
+        const rect = range.getBoundingClientRect();
+        showPopup(rect.left + window.scrollX, rect.bottom + window.scrollY);
+    });
+
+    document.addEventListener('mousedown', function(e) {
+        const popup = document.getElementById('highlight-popup');
+        if (!popup.contains(e.target)) {
+            hidePopup();
+        }
+    });
+});
+
+function showPopup(x, y) {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.left = x + 'px';
+    popup.style.top = y + 'px';
+    popup.style.display = 'block';
+}
+
+function hidePopup() {
+    const popup = document.getElementById('highlight-popup');
+    popup.style.display = 'none';
+}
+
+function highlightText(color) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    if (range.collapsed) return;
+
+    const span = document.createElement('span');
+    span.className = `highlight highlight-${color}`;
+    range.surroundContents(span);
+
+    saveHighlights();
+    hidePopup();
+}
+
+function removeHighlight() {
+    const selection = window.getSelection();
+    if (!selection.rangeCount) return;
+
+    const range = selection.getRangeAt(0);
+    const parentElement = range.commonAncestorContainer.parentElement;
+
+    if (parentElement.classList.contains('highlight')) {
+        const parent = parentElement.parentNode;
+        while (parentElement.firstChild) {
+            parent.insertBefore(parentElement.firstChild, parentElement);
+        }
+        parent.removeChild(parentElement);
+    }
+
+    saveHighlights();
+    hidePopup();
+}
+
+// Hàm lưu các highlight vào local storage
+function saveHighlights() {
+    let highlights = document.querySelectorAll('.highlight-yellow, .highlight-green, .highlight-red');
+    let highlightData = [];
+
+    highlights.forEach((highlight) => {
+        highlightData.push({
+            text: highlight.textContent,
+            class: highlight.className
+        });
+    });
+
+    localStorage.setItem('highlights', JSON.stringify(highlightData));
+}
+// Hàm tải các highlight từ local storage
+function loadHighlights() {
+    let highlightData = JSON.parse(localStorage.getItem('highlights') || '[]');
+    let bodyHtml = document.body.innerHTML;
+
+    highlightData.forEach((highlight) => {
+        let tempDiv = document.createElement('div');
+        tempDiv.textContent = highlight.text;
+        let highlightHtml = `<span class="${highlight.class}">${tempDiv.innerHTML}</span>`;
+        bodyHtml = bodyHtml.replace(highlight.text, highlightHtml);
+    });
+    document.body.innerHTML = bodyHtml;
+}
+
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC HIGHLIGHT-->
+
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC CỦA CÂU HỎI TƯƠNG TÁC-->
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const textArea = document.getElementById('textArea');
+    const saveButton = document.getElementById('saveButton');
+    const clearButton = document.getElementById('clearButton');
+
+    // Load the saved text from Local Storage when the page loads
+    const savedText = localStorage.getItem('textAreaContent');
+    if (savedText) {
+        textArea.value = savedText;
+    }
+
+    // Save the text to Local Storage when the "Save" button is clicked
+    saveButton.addEventListener('click', function() {
+        localStorage.setItem('textAreaContent', textArea.value);
+        alert('Bạn muốn lưu ghi chép của mình?');
+    });
+
+    // Clear the text from Local Storage and the text area when the "Clear" button is clicked
+    clearButton.addEventListener('click', function() {
+        localStorage.removeItem('textAreaContent');
+        textArea.value = '';
+        alert('Bạn muốn xóa ghi chép?');
+    });
+});
+
+</script> -->
+<script>
+    // Function to save data to local storage
+    function saveData(id) {
+        const data = document.getElementById(id).value;
+        localStorage.setItem(id, data);
+        alert('Câu trả lời của bạn đã được lưu!');
+    }
+
+    // Function to load data from local storage
+    function loadData() {
+        const writingAreas = document.querySelectorAll('.writing-area');
+        writingAreas.forEach(area => {
+            const savedData = localStorage.getItem(area.id);
+            if (savedData) {
+                area.value = savedData;
+            }
+        });
+    }
+
+    // Load data when the page loads
+    window.onload = loadData;
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC CỦA CÂU HỎI TƯƠNG TÁC-->
+
+
+
+
+
+<!--DƯỚI ĐÂY LÀ PHẦN JAVA CHO VIỆC ZOOM ẢNH-->
+<script>
+    // Initialize PhotoSwipe
+    document.addEventListener('DOMContentLoaded', function() {
+        var initPhotoSwipeFromDOM = function(gallerySelector) {
+            var parseThumbnailElements = function(el) {
+                var thumbElements = el.childNodes,
+                    numNodes = thumbElements.length,
+                    items = [],
+                    figureEl,
+                    linkEl,
+                    size,
+                    item;
+
+                for (var i = 0; i < numNodes; i++) {
+                    figureEl = thumbElements[i];
+
+                    if (figureEl.nodeType !== 1) {
+                        continue;
+                    }
+
+                    linkEl = figureEl.children[0];
+                    size = linkEl.getAttribute('data-size').split('x');
+
+                    item = {
+                        src: linkEl.getAttribute('href'),
+                        w: parseInt(size[0], 10),
+                        h: parseInt(size[1], 10)
+                    };
+
+                    if (figureEl.children.length > 1) {
+                        item.title = figureEl.children[1].innerHTML;
+                    }
+
+                    if (linkEl.children.length > 0) {
+                        item.msrc = linkEl.children[0].getAttribute('src');
+                    }
+
+                    item.el = figureEl;
+                    items.push(item);
+                }
+
+                return items;
+            };
+
+            var closest = function closest(el, fn) {
+                return el && (fn(el) ? el : closest(el.parentNode, fn));
+            };
+
+            var onThumbnailsClick = function(e) {
+                e = e || window.event;
+                e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                var eTarget = e.target || e.srcElement;
+
+                var clickedListItem = closest(eTarget, function(el) {
+                    return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+                });
+
+                if (!clickedListItem) {
+                    return;
+                }
+
+                var clickedGallery = clickedListItem.parentNode,
+                    childNodes = clickedListItem.parentNode.childNodes,
+                    numChildNodes = childNodes.length,
+                    nodeIndex = 0,
+                    index;
+
+                for (var i = 0; i < numChildNodes; i++) {
+                    if (childNodes[i].nodeType !== 1) {
+                        continue;
+                    }
+
+                    if (childNodes[i] === clickedListItem) {
+                        index = nodeIndex;
+                        break;
+                    }
+                    nodeIndex++;
+                }
+
+                if (index >= 0) {
+                    openPhotoSwipe(index, clickedGallery);
+                }
+                return false;
+            };
+
+            var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
+                var pswpElement = document.querySelectorAll('.pswp')[0],
+                    gallery,
+                    options,
+                    items;
+
+                items = parseThumbnailElements(galleryElement);
+
+                options = {
+                    galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+                    getThumbBoundsFn: function(index) {
+                        var thumbnail = items[index].el.getElementsByTagName('img')[0],
+                            pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                            rect = thumbnail.getBoundingClientRect();
+
+                        return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+                    }
+                };
+
+                if (fromURL) {
+                    if (options.galleryPIDs) {
+                        for (var j = 0; j < items.length; j++) {
+                            if (items[j].pid == index) {
+                                options.index = j;
+                                break;
+                            }
+                        }
+                    } else {
+                        options.index = parseInt(index, 10) - 1;
+                    }
+                } else {
+                    options.index = parseInt(index, 10);
+                }
+
+                if (isNaN(options.index)) {
+                    return;
+                }
+
+                if (disableAnimation) {
+                    options.showAnimationDuration = 0;
+                }
+
+                gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+                gallery.init();
+            };
+
+            var galleryElements = document.querySelectorAll(gallerySelector);
+
+            for (var i = 0, l = galleryElements.length; i < l; i++) {
+                galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+                galleryElements[i].onclick = onThumbnailsClick;
+            }
+        };
+
+        initPhotoSwipeFromDOM('.my-gallery');
+    });
+</script>
+<!--TRÊN ĐÂY LÀ PHẦN JAVA CHO VIỆC ZOOM ẢNH-->
+
+
+
+</html>

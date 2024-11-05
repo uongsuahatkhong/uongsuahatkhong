@@ -1,0 +1,106 @@
+#wp-content{
+    max-width: 1010px;
+    margin: 0px auto;
+    display: flex;
+}
+#header{
+    background-color: #a9f7c0;
+    height: 50px;
+}
+.container{
+    display: flex;
+    max-width: 960px;
+    margin:0px auto;
+    padding: 12px 10px;
+}
+.container a{
+    padding: 0px 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#home{
+    font-size: 22px;
+}
+#tabkhac{
+    margin-left:50px;
+    padding: 3.5px;
+}
+#nutdocsach a{
+    border: 2px solid #4d504d;
+    width: 250px;
+    text-align: center;
+    border-radius: 50px;
+    padding: 15px 58px;
+    background-color: #25aa44;
+    color:white;
+}
+#nutdocsach{
+    margin-top: 15px;
+    cursor: pointer;
+}
+#nutdocsach:hover a{
+    background-color: #ff6f5c;
+    border: 2px solid  #ff6f5c;
+}
+#noidunggd{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+#nuttim {
+    border:none;
+    background: none;
+}
+#nuttim i{
+    color: #000000;
+    font-size: 35px;
+}
+#nutshare{
+    border:none;
+    background: none;
+}
+#nutshare i{
+    color: black;
+    font-size: 35px;
+}
+.nav-tabs{
+    display:flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: 3px solid #ddd;
+}
+.nav-tabs li{
+    margin-right: 10px;
+}
+.nav-tabs li a{
+    display: block;
+    padding: 6px 10px;
+    text-decoration: none;
+    position: relative;
+}
+.nav-tabs li a::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    position:absolute;
+    left: 0px;
+    bottom: -3px;
+    background: transparent;
+}
+.nav-tabs li.active a::after, .nav-tabs li:hover a::after{
+    background: #ff6f5c;
+}
+.tab-content{
+    padding: 20px 0px;
+}
+.nav-tabs li.active a{
+    color:  #ff6f5c;
+}
+.nav-tabs a{
+    font-size: 20px;
+    color: black;
+}
+.tab-content-item{
+    font-size: 18px;
+    text-align: justify;
+}
