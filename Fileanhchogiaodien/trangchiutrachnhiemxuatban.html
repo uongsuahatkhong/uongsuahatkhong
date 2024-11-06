@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chịu trách nhiệm xuất bản</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="/csschotrangchiutrachnhiemxuatban.css">
+    <style type="text/css">
+        #container{
+            max-width: 1010px;
+            margin: 0px auto;
+            font-family:  'Times New Roman', Times, serif;
+            text-align: center;
+            font-size: 19px;
+        }
+
+
+       
+        .bentrai{
+        display: none;
+    }
+    .benphai{
+        display: none;
+    }
+    #nut4 i{
+        font-size: 25px;
+    }
+    #nut4{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: pointer;
+    }
+
+    #nut5 i{
+        font-size: 25px;
+    }
+    #nut5{
+        padding: 10px;
+        border:none;
+    background:none;
+    color:#fff8cf;
+    cursor: pointer;
+    }
+
+    </style>
+
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+    </style>
+
+<style type="text/css">
+    .bentrai{
+    display: none;
+}
+.benphai{
+    display: none;
+}
+#nut4 i{
+    font-size: 35px;
+}
+#nut4{
+    padding: 10px;
+    border:none;
+background:none;
+color:#fff8cf;
+cursor: pointer;
+}
+
+#nut5 i{
+    font-size: 35px;
+}
+#nut5{
+    padding: 10px;
+    border:none;
+background:none;
+color:#fff8cf;
+cursor: pointer;
+}
+    @media screen and (max-width: 768px) {
+        .player{
+            width: 80%;
+        
+        }
+        #khoi1{
+            font-size: 15px;
+        }
+        #khoi2{
+            font-size: 15px;
+        }
+        #khoi3{
+            font-size: 15px;
+        }
+        #khoi4{
+            font-size: 15px;
+        }
+        #khoi5{
+            font-size: 15px;
+        }
+        #khoicuoi{
+            font-size: 15px;
+        }
+        .slider .list .item img{
+           height: 50px;
+            width: 400px;
+        }
+        .slider #list11{
+            display: none;
+        }
+        
+        img{
+            width: 100%;
+        }
+        #textbanquyen{
+            display: none;
+        }
+        #backtop1{
+        display: none;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    #backtop{
+        display: none;
+    }
+    .info{
+        font-size: 15px;
+    }
+    /* .thanhtrai{
+        display:none;
+    }
+    .thanhphai{
+        display:none;
+    } */
+    
+    .benphai{
+        position: absolute;
+        left: 85%;
+        bottom: 3%;
+    }
+    .bentrai{
+        position: absolute;
+        right: 85%;
+        bottom: 3%;
+    }
+    .thanhtrai{
+        display:none;
+    }
+    .thanhphai{
+        display:none;
+    }
+    .bentrai{
+    display: block;
+}
+.benphai{
+    display: block;
+}
+
+footer{
+    height: 10%;
+}
+#textbanquyen{
+    display: none;
+}
+    }
+</style>
+</head>
+<body id="text">
+
+
+
+
+    <!-- <div id="footer">
+        <div class="bentrai">
+            <a target="_self" href="trangbiatruoc.html"><button id="nut4"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+        </div>
+        <div class="benphai">
+            <a target="_self" href="/filenoidunghtml/"><button id="nut5"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+        </div>
+    </div> -->
+
+
+
+    <!--DƯỚI ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+    <div class="thanhphai">
+        <a target="_self" href="/filenoidunghtml/loimodau.html"><button id="nut1"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+    <div class="thanhtrai">
+        <a target="_self" href="trangbiatruoc.html"><button id="nut2"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+    <!--TRÊN ĐÂY LÀ PHẦN CỦA THANH CHUYỂN TRANG-->
+
+
+
+    <!--DƯỚI ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+<div id="backtop1" class="vecuoitrang" >
+    <i onclick="scrollToBottom()" class="bi bi-arrow-down-square-fill"></i>
+</div>
+<div id="backtop" class="vedautrang">
+    <i onclick="scrollToTop()" class="bi bi-arrow-up-square-fill"></i>
+</div>
+<!--TRÊN ĐÂY LÀ PHẦN CHO THANH ĐẦU VÀ CUỐI TRANG-->
+
+
+
+
+
+<div  align="center"><img src="/Fileanhchogiaodien/bannerslider.png" width="100%"></div>
+    <div class="slider" style="
+            --width: 100px;
+            --height: 50px;
+            --quantity: 10;
+        ">
+            <div align="center" class="list">
+                <div class="item" style="--position: 1"><img src="/Fileanhchogiaodien/anhtexxtslide.png" alt=""></div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="slider" reverse="true" style="
+            --width: 90px;
+            --height: 90px;
+            --quantity: 14;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="/Fileanhchogiaodien/anhvuongsldie1.png" alt=""></div>
+                <div class="item" style="--position: 2"><img src="/Fileanhchogiaodien/anhvuongsldie2.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="/Fileanhchogiaodien/anhvuongsldie3.png" alt=""></div>
+                <div class="item" style="--position: 4"><img src="/Fileanhchogiaodien/anhvuongsldie4.png" alt=""></div>
+                <div class="item" style="--position: 5"><img src="/Fileanhchogiaodien/anhvuongsldie5.png" alt=""></div>
+                <div class="item" style="--position: 6"><img src="/Fileanhchogiaodien/anhvuongsldie6.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="/Fileanhchogiaodien/anhvuongsldie7.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="/Fileanhchogiaodien/anhvuongsldie8.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="/Fileanhchogiaodien/anhvuongsldie9.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="/Fileanhchogiaodien/anhvuongsldie7.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="/Fileanhchogiaodien/anhvuongsldie8.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="/Fileanhchogiaodien/anhvuongsldie9.png" alt=""></div>
+                <div class="item" style="--position: 10"><img src="/Fileanhchogiaodien/anhvuongsldie3.png" alt=""></div>
+                <div class="item" style="--position: 11"><img src="/Fileanhchogiaodien/anhvuongsldie4.png" alt=""></div>
+                <div class="item" style="--position: 12"><img src="/Fileanhchogiaodien/anhvuongsldie5.png" alt=""></div>
+                <div class="item" style="--position: 13"><img src="/Fileanhchogiaodien/anhvuongsldie1.png" alt=""></div>
+                <div class="item" style="--position: 14"><img src="/Fileanhchogiaodien/anhvuongsldie2.png" alt=""></div>
+                
+                
+                
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+    <div class="effect3" id="container">
+        <!-- <div id="textmucluc">
+            <p style="font-size: 23px;"><b>Không phần nào trong xuất bản phẩm này được phép sao chép hay phát hành dưới bất kỳ hình thức hoặc phương tiện nào nếu không được sự cho phép </b></p>
+        </div> -->
+        <hr>
+        <div id="khoi1">
+            <li><a><b>Chịu trách nhiệm xuất bản</b></a></li>
+            <li>Giám đốc: PHAN THỊ THU HÀ</li>
+        </div>
+        <div id="khoi2">
+            <li><b>Chịu trách nhiệm nội dung</b></li>
+            <li>Tổng biên tập: NGUYỄN THÀNH NAM</li>
+        </div>
+        <div id="khoi3">
+            <li><b>Biên tập sách điện tử</b></li>
+            <li>TRẦN MAI ANH</li>
+        </div>
+        <div id="khoi4">
+            <li><b>Kỹ thuật sách điện tử</b></li>
+            <li>LÊ DUY TRUNG</li>
+        </div>
+        <div id="khoi5">
+            <li><b>Trình bày bìa</b></li>
+            <li>TRẦN QUỐC HÙNG</li>
+        </div>
+        <hr>
+        <div id="khoicuoi">
+            <li>Số xác nhận ĐKXB: 1379-2024/CXBIPH/13-287/NXBT, ngày 23/06/2024</li>
+            <li>Quyết định xuất bản số: 1437 LK-XH/QĐ-NXBT, ngày 13/07/2024</li>
+            <li>Nộp lưu chiểu năm 2024</li>
+        </div>
+
+    </div>
+    <div class="slider" reverse="true" style="
+            --width: 90px;
+            --height: 90px;
+            --quantity: 14;
+        ">
+            <div class="list" id="list11">
+                <div class="item" style="--position: 1"><img src="/Fileanhchogiaodien/anhvuongsldie1.png" alt=""></div>
+                <div class="item" style="--position: 2"><img src="/Fileanhchogiaodien/anhvuongsldie2.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="/Fileanhchogiaodien/anhvuongsldie3.png" alt=""></div>
+                <div class="item" style="--position: 4"><img src="/Fileanhchogiaodien/anhvuongsldie4.png" alt=""></div>
+                <div class="item" style="--position: 5"><img src="/Fileanhchogiaodien/anhvuongsldie5.png" alt=""></div>
+                <div class="item" style="--position: 6"><img src="/Fileanhchogiaodien/anhvuongsldie6.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="/Fileanhchogiaodien/anhvuongsldie7.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="/Fileanhchogiaodien/anhvuongsldie8.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="/Fileanhchogiaodien/anhvuongsldie9.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="/Fileanhchogiaodien/anhvuongsldie7.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="/Fileanhchogiaodien/anhvuongsldie8.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="/Fileanhchogiaodien/anhvuongsldie9.png" alt=""></div>
+                <div class="item" style="--position: 10"><img src="/Fileanhchogiaodien/anhvuongsldie3.png" alt=""></div>
+                <div class="item" style="--position: 11"><img src="/Fileanhchogiaodien/anhvuongsldie4.png" alt=""></div>
+                <div class="item" style="--position: 12"><img src="/Fileanhchogiaodien/anhvuongsldie5.png" alt=""></div>
+                <div class="item" style="--position: 13"><img src="/Fileanhchogiaodien/anhvuongsldie1.png" alt=""></div>
+                <div class="item" style="--position: 14"><img src="/Fileanhchogiaodien/anhvuongsldie2.png" alt=""></div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+    <p><br></p>
+<p><br></p>
+
+
+
+<!--Phần footer-->
+<footer>
+    <div class="bentrai">
+        <a target="_self" href="trangbiatruoc.html"><button id="nut4"><i class="bi bi-arrow-left-circle-fill"></i></button></a>
+    </div>
+
+    <p id="textbanquyen"  style="color: rgb(255, 255, 255); text-align: center; font-size: 15px;">Sách thuộc bản quyền của NXB</p>
+
+    <div class="benphai">
+        <a target="_self" href="/filenoidunghtml/loimodau.html"><button id="nut5"><i class="bi bi-arrow-right-circle-fill"></i></button></a>
+    </div>
+
+</footer>
+
+<script>
+    ScrollReveal({ 
+        reset: true,
+        distance: '60px',
+        duration: 2500,
+        delay: 400,
+    });
+
+    ScrollReveal().reveal('.tieudenhomnguyenlieu', { delay: 500, origin: 'left' });
+    ScrollReveal().reveal('.effect2', { delay: 600, origin: 'left' });
+    ScrollReveal().reveal('.effect3', { delay: 800, origin: 'left' });
+    ScrollReveal().reveal('.effect4', { delay: 800, origin: 'left' });
+
+
+
+    function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+    }
+    
+    function scrollToBottom() {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    });
+    }
+
+
+    $(function(){
+        $('#contentVideo').bind('contextmenu',function(){ return false;});
+    });
+</script>
+</body>
+</html>
