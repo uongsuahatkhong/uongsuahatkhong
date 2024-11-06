@@ -1,9 +1,9 @@
 let songs = [
     {
         name: 'Vincent Van Gogh',
-        path: '../Filemusic/1LovingVincent.mp3',
+        path: '..Filemusic/1LovingVincent.mp3',
         artist: 'artist 1',
-        cover: '../Fileanhchogiaodien/Loving Vincent.png'
+        cover: '..Fileanhchogiaodien/Loving Vincent.png'
     },
     {
         name: 'Nghệ thuật là liều thuốc chữa lành',
